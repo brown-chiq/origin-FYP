@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LogiKApp</string>
+    <string name="logikit">LogiKit</string>
+    <string name="crashcourse">Crash Course</string>
+    <string name="challenges">Challenges</string>
+    <string name="welcome_to_logicapp">Welcome to LogiCApp</string>
+    <string name="course_material">COURSE MATERIAL TO BE ADDED SOON</string>
+    <string name="and">AND</string>
+    <string name="not">NOT</string>
+    <string name="or">OR</string>
+    <string name="challenge_intro">Ready to squeeze some brain juice!!!</string>
+    <string name="manualIntro">Instructions on how to use the LogiKit</string>
+</resources>

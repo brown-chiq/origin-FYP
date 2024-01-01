@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout"
+    tools:context="com.example.fyp.MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/caesar_dressing"
+        android:text="@string/welcome_to_logicapp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/logikit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logikit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/anton"
+        android:padding="10dp"
+        android:text="@string/logikit"
+        android:textSize="18sp"
+        android:contextClickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/crashCourseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
+
+    <Button
+        android:id="@+id/crashCourseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/hot_pink"
+        android:fontFamily="@font/anton"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:text="@string/crashcourse"
+        app:layout_constraintBottom_toTopOf="@id/challenges_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logikit_button" />
+
+    <Button
+        android:id="@+id/challenges_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_orange"
+        android:fontFamily="@font/anton"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:contextClickable="true"
+        android:text="@string/challenges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crashCourseButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
