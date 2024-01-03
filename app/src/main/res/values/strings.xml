@@ -10,4 +10,6 @@
     <string name="or">OR</string>
     <string name="challenge_intro">Ready to squeeze some brain juice!!!</string>
     <string name="manualIntro">Instructions on how to use the LogiKit</string>
+    <string name="intro">Introduction</string>
+    <string name="logic_signals">A logic value, 0 or 1, is often called a binary digit, or a bit. </string>
 </resources>
