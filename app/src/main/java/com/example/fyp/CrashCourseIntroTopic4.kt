@@ -10,10 +10,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.ComponentActivity
 
-class CrashCourseIntroTopic3 : ComponentActivity() {
+class CrashCourseIntroTopic4 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crash_course_intro_topic3)
+        setContentView(R.layout.activity_crash_course_intro_topic4)
 
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
@@ -33,7 +33,7 @@ class CrashCourseIntroTopic3 : ComponentActivity() {
 
         var prevButton = findViewById<Button>(R.id.prev_page)
         prevButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseIntroTopic2::class.java)
+            val intent = Intent(this, CrashCourseIntroTopic3::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
