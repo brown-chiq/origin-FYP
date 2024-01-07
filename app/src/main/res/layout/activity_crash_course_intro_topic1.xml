@@ -22,9 +22,8 @@
 
     <ImageView
         android:id="@+id/binaryImage"
-        android:layout_width="match_parent"
-        android:layout_height="300sp"
-        android:scaleType="fitXY"
+        android:layout_width="462dp"
+        android:layout_height="332dp"
         android:contentDescription="TODO"
         android:src="@drawable/binary"
         app:layout_constraintBottom_toTopOf="@+id/logicSignals"
