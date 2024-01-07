@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrashCourseIntroTopic3">
+    tools:context=".CrashCourseIntroTopic5">
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="26sp"
@@ -28,11 +29,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/next_page"
+        android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="@string/next_page"
+        android:text="@string/done"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +43,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="100sp"
-        android:progress="60"
+        android:progress="100"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,43 +51,48 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/combinational_circuit_title"
+        android:id="@+id/logic_operations_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="@string/combinational_circuit"
+        android:padding="10sp"
+        android:layout_marginBottom="30sp"
+        android:layout_marginVertical="10sp"
+        android:text="@string/logic_operations_title"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/combinational_image"
-        app:layout_constraintTop_toBottomOf="@+id/back_button" />
-
-    <ImageView
-        android:id="@+id/combinational_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        android:src="@drawable/block_diagram"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/combinational_circuit_explanation"
-        app:layout_constraintTop_toBottomOf="@+id/combinational_circuit_title" />
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        app:layout_constraintBottom_toTopOf="@id/logic_operations_explanation1" />
 
     <TextView
-        android:id="@+id/combinational_circuit_explanation"
+        android:id="@+id/logic_operations_explanation1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="@string/combination_circuit_explanation"
+        android:layout_marginTop="120sp"
+        android:padding="30sp"
+        android:text="@string/logic_operations_explanation1"
         android:textAlignment="center"
         android:textSize="25sp"
-        android:layout_marginVertical="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/logic_operations_explanation2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/combinational_image" />
+        app:layout_constraintTop_toBottomOf="@+id/logic_operations_title" />
 
+    <TextView
+        android:id="@+id/logic_operations_explanation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="60sp"
+        android:padding="30sp"
+        android:text="@string/logic_operations_explanation2"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/done"
+        app:layout_constraintTop_toBottomOf="@+id/logic_operations_explanation1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

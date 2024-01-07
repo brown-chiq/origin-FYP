@@ -18,4 +18,8 @@
     <string name="combination_circuit_explanation">A logic circuit whose outputs depend only on its current inputs is called a combinational circuit</string>
     <string name="truth_table">Truth Table</string>
     <string name="truth_table_explanation">A combinational circuits\'s operation is fully described by a truth table that lists all combinations of input values and the output value(s) produced by each one.</string>
+    <string name="logic_operations_title">Logic Operations</string>
+    <string name="done">Done</string>
+    <string name="logic_operations_explanation1">Operations performed on the binary variables few called Logic Operations.</string>
+    <string name="logic_operations_explanation2">Just three BASIC logic operations/functions, AND, OR and NOT, can be used to build any combinational digital logic circuit.</string>
 </resources>
