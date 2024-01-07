@@ -16,8 +16,10 @@ class CrashCourseMain : ComponentActivity() {
 
         var introButton = findViewById<Button>(intro_button)
         introButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseIntroTopic::class.java)
+            val intent = Intent(this, CrashCourseIntroTopic1::class.java)
             startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         var backButton = findViewById<ImageView>(back_button)

@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="CrashCourseIntroTopic">
+    tools:context="CrashCourseIntroTopic1">
 
     <TextView
         android:id="@+id/logicSignals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15sp"
+        android:padding="20sp"
         android:text="@string/logic_signals"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_marginBottom="200sp"
+        android:textSize="25sp"
+        android:layout_marginVertical="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,9 @@
 
     <ImageView
         android:id="@+id/binaryImage"
-        android:layout_width="400sp"
-        android:layout_height="200sp"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:scaleType="fitXY"
         android:contentDescription="TODO"
         android:src="@drawable/binary"
         app:layout_constraintBottom_toTopOf="@+id/logicSignals"
@@ -42,6 +43,27 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <Button
+        android:id="@+id/next_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/next_page"
+        android:layout_margin="20sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100sp"
+        android:progress="20"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LogiKApp</string>
+    <string name="app_name">LogiCApp</string>
     <string name="logikit">LogiKit</string>
     <string name="crashcourse">Crash Course</string>
     <string name="challenges">Challenges</string>
@@ -11,5 +11,9 @@
     <string name="challenge_intro">Ready to squeeze some brain juice!!!</string>
     <string name="manualIntro">Instructions on how to use the LogiKit</string>
     <string name="intro">Introduction</string>
-    <string name="logic_signals">A logic value, 0 or 1, is often called a binary digit, or a bit. </string>
+    <string name="logic_signals">A logic value, 0 or 1, is often called a binary digit, or a bit. If an application requires more than two discrete values, more bits may be used, with a set o n bits representing 2 to the power of n  different values</string>
+    <string name="previous_page">Prev</string>
+    <string name="next_page">Next</string>
+    <string name="combinational_circuit">Combinational Circuit</string>
+    <string name="combination_circuit_explanation">A logic circuit whose outputs depend only on its current inputs is called a combinational circuit</string>
 </resources>
