@@ -17,14 +17,14 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/and_button"
+        app:layout_constraintBottom_toTopOf="@id/logic_operations_button"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/and_button"
+        android:id="@+id/logic_operations_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/and"
+        android:text="@string/logic_operations_title"
         android:padding="10sp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/not_button"
-        app:layout_constraintTop_toBottomOf="@+id/and_button" />
+        app:layout_constraintTop_toBottomOf="@+id/logic_operations_button" />
     <Button
         android:id="@+id/not_button"
         android:layout_width="wrap_content"

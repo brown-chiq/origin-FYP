@@ -10,10 +10,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.ComponentActivity
 
-class CrashCourseIntroTopic5 : ComponentActivity() {
+class CrashCourseLogicTopic3 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crash_course_intro_topic5)
+        setContentView(R.layout.activity_crash_course_logic_topic3)
 
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
@@ -23,15 +23,17 @@ class CrashCourseIntroTopic5 : ComponentActivity() {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
-        var doneButton = findViewById<Button>(R.id.done)
-        doneButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseMain::class.java)
+        var nextButton = findViewById<Button>(R.id.next_page)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, CrashCourseLogicTopic3::class.java)
             startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         var prevButton = findViewById<Button>(R.id.prev_page)
         prevButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseIntroTopic4::class.java)
+            val intent = Intent(this, CrashCourseLogicTopic2::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
@@ -50,7 +52,7 @@ class CrashCourseIntroTopic5 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 80F, 100F)
+        val anim = ProgressBarAnimation(progressBar, 40F, 60F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
     }

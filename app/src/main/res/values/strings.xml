@@ -22,4 +22,7 @@
     <string name="done">Done</string>
     <string name="logic_operations_explanation1">Operations performed on the binary variables few called Logic Operations.</string>
     <string name="logic_operations_explanation2">Just three BASIC logic operations/functions, AND, OR and NOT, can be used to build any combinational digital logic circuit.</string>
+    <string name="logic_operations_NOT_explanation">This operation is represented by an over bar (-) or a prime (\').\nIt produces the opposite value: \n- If X is 0 then X\' is 1.\n- If X is 1 then X\' is 0.\nAlso called complement or inversion operation</string>
+    <string name="logic_operations_AND_explanation">- The AND operation is represented by a dot (.).e.g. F = X.Y\n- Usually the doe is omitted: F = XY\n- The operation results is if ALL the variables are 1, then the result is 1. Otherwise, the result is 0.\n</string>
+    <string name="logic_operations_OR_explanation">- The OR operation is represented by a plus sign (+). e.g., F = X + Y\n- The operatioin result is if ANY of the variables is 1, then the result is 1. Otherwise the result is 0.</string>
 </resources>
