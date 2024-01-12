@@ -25,34 +25,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logic_operations_title"
-        android:padding="10sp"
+        android:padding="20sp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/or_button"
+        app:layout_constraintBottom_toTopOf="@id/bool_fun_button"
         app:layout_constraintTop_toBottomOf="@+id/intro_button" />
     <Button
-        android:id="@+id/or_button"
+        android:id="@+id/bool_fun_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/or"
-        android:padding="10sp"
+        android:text="@string/boolean_function"
+        android:padding="20sp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/not_button"
+        app:layout_constraintBottom_toTopOf="@id/kmap_button"
         app:layout_constraintTop_toBottomOf="@+id/logic_operations_button" />
+
     <Button
-        android:id="@+id/not_button"
+        android:id="@+id/kmap_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/not"
-        android:padding="10sp"
+        android:padding="20sp"
+        android:text="@string/kmap"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/or_button" />
+        app:layout_constraintTop_toBottomOf="@+id/bool_fun_button" />
 
     <ImageView
         android:id="@+id/back_button"

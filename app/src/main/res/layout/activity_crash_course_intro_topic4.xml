@@ -86,7 +86,7 @@
         android:text="@string/truth_table_explanation"
         android:textAlignment="center"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@id/next_page"
+        app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/truth_table_image" />

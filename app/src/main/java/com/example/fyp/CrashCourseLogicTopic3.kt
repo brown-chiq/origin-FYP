@@ -25,7 +25,7 @@ class CrashCourseLogicTopic3 : ComponentActivity() {
 
         var nextButton = findViewById<Button>(R.id.next_page)
         nextButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseLogicTopic3::class.java)
+            val intent = Intent(this, CrashCourseLogicTopic4::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -52,7 +52,7 @@ class CrashCourseLogicTopic3 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 40F, 60F)
+        val anim = ProgressBarAnimation(progressBar, 25F, 37F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
     }

@@ -10,10 +10,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.ComponentActivity
 
-class CrashCourseLogicTopic2 : ComponentActivity() {
+class CrashCourseLogicTopic6 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crash_course_logic_topic2)
+        setContentView(R.layout.activity_crash_course_logic_topic6)
 
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
@@ -25,7 +25,7 @@ class CrashCourseLogicTopic2 : ComponentActivity() {
 
         var nextButton = findViewById<Button>(R.id.next_page)
         nextButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseLogicTopic3::class.java)
+            val intent = Intent(this, CrashCourseLogicTopic7::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -33,7 +33,7 @@ class CrashCourseLogicTopic2 : ComponentActivity() {
 
         var prevButton = findViewById<Button>(R.id.prev_page)
         prevButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseLogicTopic1::class.java)
+            val intent = Intent(this, CrashCourseLogicTopic5::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
@@ -52,7 +52,7 @@ class CrashCourseLogicTopic2 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 12F, 25F)
+        val anim = ProgressBarAnimation(progressBar, 62F, 75F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
     }

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrashCourseLogicTopic1">
-
+    tools:context=".CrashCourseLogicTopic8">
 
     <ImageView
         android:id="@+id/back_button"
@@ -19,11 +18,22 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/next_page"
+        android:id="@+id/prev_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="@string/next_page"
+        android:text="@string/previous_page"
+        android:layout_margin="20sp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/done"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,51 +43,51 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="100sp"
-        android:progress="12"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
+        android:layout_marginBottom="20dp"
+        android:progress="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/logic_operations_NOT"
+        android:id="@+id/logic_operations_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10sp"
         android:layout_marginVertical="10sp"
-        android:text="@string/not"
+        android:padding="10sp"
+        android:text="@string/summary"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/summary_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_button"
-        app:layout_constraintBottom_toTopOf="@id/not_image" />
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
     <ImageView
-        android:id="@+id/not_image"
+        android:id="@+id/summary_image"
         android:layout_width="419dp"
         android:layout_height="203dp"
         android:padding="20sp"
         android:contentDescription="TODO"
-        android:src="@drawable/not"
-        app:layout_constraintBottom_toTopOf="@id/logic_operations_NOT_explanation"
+        android:src="@drawable/summary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logic_operations_NOT" />
+        app:layout_constraintBottom_toTopOf="@id/summarytt_image"
+        app:layout_constraintTop_toBottomOf="@+id/logic_operations_summary" />
 
-    <TextView
-        android:id="@+id/logic_operations_NOT_explanation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/summarytt_image"
+        android:layout_width="419dp"
+        android:layout_height="203dp"
         android:padding="20sp"
-        android:text="@string/logic_operations_NOT_explanation"
-        android:textAlignment="textStart"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@id/next_page"
+        android:contentDescription="TODO"
+        android:src="@drawable/summarytt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/not_image" />
+        app:layout_constraintBottom_toTopOf="@id/done"
+        app:layout_constraintTop_toBottomOf="@+id/summary_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

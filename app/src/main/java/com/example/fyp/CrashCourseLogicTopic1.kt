@@ -44,7 +44,7 @@ class CrashCourseLogicTopic1 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 0F, 20F)
+        val anim = ProgressBarAnimation(progressBar, 0F, 12F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
     }
