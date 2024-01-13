@@ -1,8 +1,8 @@
 package com.example.fyp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.ComponentActivity
 
@@ -17,6 +17,38 @@ class ChallengesMain : ComponentActivity() {
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        }
+
+        var levelOne = findViewById<Button>(R.id.level_one)
+        levelOne.setOnClickListener {
+            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        var levelTwo = findViewById<Button>(R.id.level_two)
+        levelTwo.setOnClickListener {
+            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        var levelThree = findViewById<Button>(R.id.level_three)
+        levelThree.setOnClickListener {
+            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+        var levelFour = findViewById<Button>(R.id.level_four)
+        levelFour.setOnClickListener {
+            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
     }
 }

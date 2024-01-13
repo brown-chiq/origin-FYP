@@ -36,5 +36,10 @@
     <string name="summary">Summary\n</string>
     <string name="boolean_function">Boolean Function</string>
     <string name="kmap">K MAP</string>
+    <string name="level_one">Level 1</string>
+    <string name="level_two">Level 2</string>
+    <string name="level_three">Level 3</string>
+    <string name="level_four">Level 4</string>
+    <string name="submit">SUBMIT</string>
 
 </resources>
