@@ -2,6 +2,9 @@ package com.example.fyp
 
 object Constants {
 
+    const val TOTAL_QUESTIONS: String = "total_questions"
+    const val CORRECT_ANSWERS: String = "correct_answers"
+
     fun getQuestions(): ArrayList<Question>{
         val questionList = ArrayList<Question>()
 
@@ -16,7 +19,7 @@ object Constants {
         questionList.add(l1q1)
 
         //level 1 question 2
-        val l1q2 = Question(1,"What logic gate is this?", R.drawable.nor,
+        val l1q2 = Question(2,"What logic gate is this?", R.drawable.nor,
             "NAND",
             "AND",
             "NOR",
@@ -25,17 +28,15 @@ object Constants {
         )
         questionList.add(l1q2)
 
-        //level 1 question 3
-        val l1q3 = Question(1,"What logic gate is this?", R.drawable.xor,
-            "NAND",
-            "NOT",
-            "NOR",
-            "XOR",
-            4
-        )
-        questionList.add(l1q3)
-
-
+//        //level 1 question 3
+//        val l1q3 = Question(3,"What logic gate is this?", R.drawable.xor,
+//            "NAND",
+//            "NOT",
+//            "NOR",
+//            "XOR",
+//            4
+//        )
+//        questionList.add(l1q3)
 
         return questionList
     }
