@@ -1,6 +1,5 @@
 package com.example.fyp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
@@ -12,10 +11,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.core.content.ContextCompat
-import com.example.fyp.R
 
 
-class ChallengesLevelOneQ1 : ComponentActivity() , View.OnClickListener {
+class ChallengesLevelOne : ComponentActivity() , View.OnClickListener {
 
     private var mCurrentPosition:Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
@@ -29,7 +27,7 @@ class ChallengesLevelOneQ1 : ComponentActivity() , View.OnClickListener {
     private lateinit var submitbtn: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_challenges_level_one_q1)
+        setContentView(R.layout.activity_challenges_level_one)
 
         opt1 = findViewById(R.id.option_one)
         opt2 = findViewById(R.id.option_two)

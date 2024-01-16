@@ -21,7 +21,7 @@ class ChallengesMain : ComponentActivity() {
 
         var levelOne = findViewById<Button>(R.id.level_one)
         levelOne.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            val intent = Intent(this, ChallengesLevelOne::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -29,7 +29,7 @@ class ChallengesMain : ComponentActivity() {
 
         var levelTwo = findViewById<Button>(R.id.level_two)
         levelTwo.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            val intent = Intent(this, ChallengesLevelOne::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -37,7 +37,7 @@ class ChallengesMain : ComponentActivity() {
 
         var levelThree = findViewById<Button>(R.id.level_three)
         levelThree.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            val intent = Intent(this, ChallengesLevelOne::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -45,7 +45,7 @@ class ChallengesMain : ComponentActivity() {
 
         var levelFour = findViewById<Button>(R.id.level_four)
         levelFour.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOneQ1::class.java)
+            val intent = Intent(this, ChallengesLevelOne::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)

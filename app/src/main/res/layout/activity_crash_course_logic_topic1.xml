@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CrashCourseLogicTopic1">
 
-
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="26sp"
@@ -18,66 +17,76 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:progress="12"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/next_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lv_notes" />
+
     <Button
         android:id="@+id/next_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="@string/next_page"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="100sp"
-        android:progress="12"
-        android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/logic_operations_NOT"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/lv_notes"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10sp"
-        android:layout_marginVertical="10sp"
-        android:text="@string/not"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/back_button"
-        app:layout_constraintBottom_toTopOf="@id/not_image" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/back_button"
+        app:layout_constraintBottom_toTopOf="@id/next_page">
 
-    <ImageView
-        android:id="@+id/not_image"
-        android:layout_width="419dp"
-        android:layout_height="203dp"
-        android:padding="20sp"
-        android:contentDescription="TODO"
-        android:src="@drawable/not"
-        app:layout_constraintBottom_toTopOf="@id/logic_operations_NOT_explanation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logic_operations_NOT" />
+        <TextView
+            android:id="@+id/logic_operations_NOT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/not"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/logic_operations_NOT_explanation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20sp"
-        android:text="@string/logic_operations_NOT_explanation"
-        android:textAlignment="textStart"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@id/next_page"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/not_image" />
+        <ImageView
+            android:id="@+id/not_image"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:contentDescription="TODO"
+            android:gravity="center"
+            android:padding="10sp"
+            android:src="@drawable/not" />
+
+        <TextView
+            android:id="@+id/logic_operations_NOT_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_margin="10dp"
+            android:text="@string/logic_operations_NOT_explanation"
+            android:textAlignment="textStart"
+            android:textSize="25sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
