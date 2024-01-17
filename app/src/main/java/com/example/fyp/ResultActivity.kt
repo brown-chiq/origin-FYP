@@ -1,7 +1,6 @@
 package com.example.fyp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -14,8 +13,8 @@ class ResultActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
-        val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
-        val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS,0)
+        val correctAnswers = intent.getIntExtra(ConstantsLevelOne.CORRECT_ANSWERS,0)
+        val totalQuestions = intent.getIntExtra(ConstantsLevelOne.TOTAL_QUESTIONS,0)
 
         score = findViewById(R.id.tv_score)
         score.text = "Your Score is $correctAnswers out of $totalQuestions"

@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.activity.ComponentActivity
 
 class ChallengesMain : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_challenges_main)
@@ -29,7 +30,11 @@ class ChallengesMain : ComponentActivity() {
 
         var levelTwo = findViewById<Button>(R.id.level_two)
         levelTwo.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOne::class.java)
+//            val pass = intent.getBooleanExtra(ConstantsLevelOne.PASS_QUIZ,true)
+//            if(pass != false) {
+//                levelTwo.isEnabled
+//            }
+            val intent = Intent(this, ChallengesLevelTwo::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
