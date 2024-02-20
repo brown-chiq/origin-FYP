@@ -30,10 +30,6 @@ class ChallengesMain : ComponentActivity() {
 
         var levelTwo = findViewById<Button>(R.id.level_two)
         levelTwo.setOnClickListener {
-//            val pass = intent.getBooleanExtra(ConstantsLevelOne.PASS_QUIZ,true)
-//            if(pass != false) {
-//                levelTwo.isEnabled
-//            }
             val intent = Intent(this, ChallengesLevelTwo::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
@@ -42,15 +38,7 @@ class ChallengesMain : ComponentActivity() {
 
         var levelThree = findViewById<Button>(R.id.level_three)
         levelThree.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOne::class.java)
-            startActivity(intent)
-            @Suppress("DEPRECATION")
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        }
-
-        var levelFour = findViewById<Button>(R.id.level_four)
-        levelFour.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelOne::class.java)
+            val intent = Intent(this, ChallengesLevelThree::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)

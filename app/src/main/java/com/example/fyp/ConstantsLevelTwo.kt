@@ -9,7 +9,7 @@ object ConstantsLevelTwo {
         val questionList = ArrayList<Question>()
 
         //level 2 question 1
-        val l2q1 = Question(1,"SOMWTHIN More Difficult", R.drawable.nandgate,
+        val l2q1 = Question(1,"SOMETHING More Difficult", R.drawable.nandgate,
             "NAND",
             "AND",
             "NOR",
@@ -19,7 +19,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q1)
 
         //level 2 question 2
-        val l2q2 = Question(2,"What logic gate is this?", R.drawable.norgate,
+        val l2q2 = Question(2,"SOMETHING More Difficult", R.drawable.norgate,
             "NAND",
             "AND",
             "NOR",
@@ -29,7 +29,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q2)
 
         //level 2 question 3
-        val l2q3 = Question(3,"What logic gate is this?", R.drawable.xorgate,
+        val l2q3 = Question(3,"SOMETHING More Difficult", R.drawable.xorgate,
             "NAND",
             "NOT",
             "NOR",
@@ -39,7 +39,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q3)
 
         //level 2 question 4
-        val l2q4 = Question(3,"What logic gate is this?", R.drawable.andgate,
+        val l2q4 = Question(3,"SOMETHING More Difficult", R.drawable.andgate,
             "NOT",
             "AND",
             "OR",
@@ -49,7 +49,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q4)
 
         //level 2 question 5
-        val l2q5 = Question(3,"What logic gate is this?", R.drawable.xnorgate,
+        val l2q5 = Question(3,"SOMETHING More Difficult", R.drawable.xnorgate,
             "NAND",
             "NOR",
             "XNOR",
@@ -59,7 +59,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q5)
 
         //level 2 question 6
-        val l2q6 = Question(1,"What logic gate is this?", R.drawable.orgate,
+        val l2q6 = Question(1,"SOMETHING More Difficult", R.drawable.orgate,
             "OR",
             "AND",
             "NOR",
@@ -69,7 +69,7 @@ object ConstantsLevelTwo {
         questionList.add(l2q6)
 
         //level 2 question 7
-        val l2q7 = Question(2,"What logic gate is this?", R.drawable.notgate,
+        val l2q7 = Question(2,"SOMETHING More Difficult", R.drawable.notgate,
             "NAND",
             "NOR",
             "NOT",

@@ -1,45 +1,95 @@
 <resources>
-    <string name="app_name">LogiCApp</string>
+    <string name="app_name">LogiKApp</string>
     <string name="logikit">LogiKit</string>
+
+    <!-- Buttons -->
+    <string name="previous_page">Prev</string>
+    <string name="next_page">Next</string>
+    <string name="done">Done</string>
+
+    <!-- Home Page -->
     <string name="crashcourse">Crash Course</string>
     <string name="challenges">Challenges</string>
     <string name="welcome_to_logicapp">Welcome to LogiCApp</string>
-    <string name="course_material">COURSE MATERIAL TO BE ADDED SOON</string>
-    <string name="and">AND</string>
-    <string name="not">NOT</string>
-    <string name="or">OR</string>
-    <string name="challenge_intro">Ready to squeeze some brain juice!!!</string>
+
+    <!-- Kit Manual -->
     <string name="manualIntro">Instructions on how to use the LogiKit</string>
-    <string name="intro">Introduction</string>
+    <string name="manual">Manual</string>
+    <string name="logikit_manual">LogiKit Manual</string>
+
+    <string name="sample_for_kit">Try this!</string>
+    <string name="boolean_function">Boolean Function</string>
+
+    <!-- Crash Course -->
+    <string name="intro">UNIT 1: Introduction</string>
     <string name="logic_signals">A logic value, 0 or 1, is often called a binary digit, or a bit. If an application requires more than two discrete values, more bits may be used, with a set o n bits representing 2 to the power of n  different values</string>
-    <string name="previous_page">Prev</string>
-    <string name="next_page">Next</string>
     <string name="combinational_circuit">Combinational Circuit</string>
     <string name="combination_circuit_explanation">A logic circuit whose outputs depend only on its current inputs is called a combinational circuit</string>
     <string name="truth_table">Truth Table</string>
     <string name="truth_table_explanation">A combinational circuits\'s operation is fully described by a truth table that lists all combinations of input values and the output value(s) produced by each one.</string>
-    <string name="logic_operations_title">Logic Operations</string>
-    <string name="done">Done</string>
+
+    <string name="logic_operations_title">UNIT 2: Logic Operations</string>
     <string name="logic_operations_explanation1">Operations performed on the binary variables few called Logic Operations.</string>
     <string name="logic_operations_explanation2">Just three BASIC logic operations/functions, AND, OR and NOT, can be used to build any combinational digital logic circuit.</string>
+    <string name="not">NOT</string>
     <string name="logic_operations_NOT_explanation">This operation is represented by an over bar (-) or a prime (\').\nIt produces the opposite value: \n- If X is 0 then X\' is 1.\n- If X is 1 then X\' is 0.\nAlso called complement or inversion operation</string>
+    <string name="and">AND</string>
     <string name="logic_operations_AND_explanation">- The AND operation is represented by a dot (.).e.g. F = X.Y\n- Usually the doe is omitted: F = XY\n- The operation results is if ALL the variables are 1, then the result is 1. Otherwise, the result is 0.\n</string>
+    <string name="or">OR</string>
     <string name="logic_operations_OR_explanation">- The OR operation is represented by a plus sign (+). e.g., F = X + Y\n- The operatioin result is if ANY of the variables is 1, then the result is 1. Otherwise the result is 0.</string>
     <string name="nand">NAND</string>
     <string name="logic_operations_NAND_explanation">- The small circle at the output is called an inversion bubble and is used to denote \"inverting\" behavior on logic symbols.\n-A NAND gate (short for NOT-AND) is the same as AND followed by NOT.\n -The truth table for NAND is the opposite of AND.</string>
     <string name="nor">NOR</string>
-    <string name="logic_operations_NOR_explanation">-A NOR gate (NOT-OR) is the same as OR followed by NOT.\n -The OR and NOT symbols are merged to get NOR\n -The truth table for NOR is the opposite of OR.\n-When any input contains 1, output becomes 0.</string>
+    <string name="logic_operations_NOR_explanation">- A NOR gate (NOT-OR) is the same as OR followed by NOT.\n -The OR and NOT symbols are merged to get NOR\n -The truth table for NOR is the opposite of OR.\n-When any input contains 1, output becomes 0.</string>
     <string name="xor">XOR</string>
     <string name="logic_operations_XOR_explanation">- The XOR is called the exclusive OR because it is similar to the OR gate, but it only outputs an HIGH if there is exclusively one input that is high. \n- It is great for projects in which the activation requires input alternation.\n- It will output a high signal if an odd number of the inputs are high.\n</string>
     <string name="xnor">XNOR</string>
     <string name="logic_operations_XNOR_explanation">- The XNOR expands to eXclusive-Not-OR.\n -This gate is referred to as the \"equivalence\" gate because its outputs HIGH only if both inputs are the same (either both high or both low), and outputs LOW when the inputs are different(one high and one low).</string>
     <string name="summary">Summary\n</string>
-    <string name="boolean_function">Boolean Function</string>
-    <string name="kmap">K MAP</string>
+
+    <string name="boolean_algebra">UNIT 3: Boolean Algebra</string>
+    <string name="bool_alge_intro">After understanding the different types of basic logic gates, let\'s look into how to combine them to represent the boolean function that performs logical tasks.</string>
+    <string name="bool_law">Boolean Algebraic Laws </string>
+    <string name="bool_law_explanation">In order to build an efficient logic circuit we need to perform simplification. \n\nThis is where Boolean Algebraic Laws come into play. \n\n\nLet\'s look into the different types of laws! </string>
+    <string name="annulment_law">Annulment Law</string>
+    <string name="annulment_law_explanation">A term AND\'ed with a “0” equals 0 or OR\'ed with a “1” will equal 1. \n\n- A . 0 = 0  \n A variable AND\'ed with 0 is always equal to 0. \n\n - A + 1 = 1 \n A variable OR\'ed with 1 is always equal to 1.\n </string>
+    <string name="identity_law">Identity Law</string>
+    <string name="identity_law_exp">A term OR\'ed with a “0” or AND\'ed with a “1” will always equal that term.\n \n- A + 0 = A   \n A variable OR\'ed with 0 is always equal to the variable.\n\n- A . 1 = A    \n A variable AND\'ed with 1 is always equal to the variable.\n </string>
+    <string name="idempotent_law">Idempotent Law</string>
+    <string name="idempotent_law_exp">An input that is AND\'ed or OR\'ed with itself is equal to that input. \n \n- A + A = A   \n A variable OR\'ed with itself is always equal to the variable.\n\n- A . A = A    \n A variable AND\'ed with itself is always equal to the variable.\n </string>
+    <!-- yet to add into crash course unit 3 -->
+    <string name="complement_law">Complement Law – A term AND\'ed with its complement equals “0” and a term OR\'ed with its complement equals “1”\n \nA . A = 0    A variable AND\'ed with its complement is always equal to 0\nA + A = 1    A variable OR\'ed with its complement is always equal to 1\n </string>
+    <string name="commutative_law">Commutative Law – The order of application of two separate terms is not important\n \nA . B = B . A    The order in which two variables are AND\'ed makes no difference\nA + B = B + A : The order in which two variables are OR\'ed makes no difference\n</string>
+    <string name="double_negation_law">Double Negation Law – A term that is inverted twice is equal to the original term\n \nA = A     A double complement of a variable is always equal to the variable\n</string>
+    <string name="de_morgans_theorem">de Morgan\'s Theorem – There are two “de Morgan\'s” rules or theorems,\n \n(1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:  A+B = A . B\n \n(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:  A.B = A + B</string>
+    <string name="other_algebraic_law">Other algebraic Laws of Boolean not detailed above include:\n</string>
+    <string name="boolean_postulates">Boolean Postulates – While not Boolean Laws in their own right, these are a set of Mathematical Laws which can be used in the simplification of Boolean Expressions.\n\n - 0 . 0 = 0 : A 0 AND\'ed with itself is always equal to 0. \n - 1 . 1 = 1 : A 1 AND\'ed with itself is always equal to 1\n - 1 . 0 = 0: A 1 AND\'ed with a 0 is equal to 0 \n - 0 + 0 = 0 : A 0 OR\'ed with itself is always equal to 0 \n - 1 + 1 = 1: A 1 OR\'ed with itself is always equal to 1. \n - 1 + 0 = 1 : A 1 OR\'ed with a 0 is equal to 1. \n- 1\' = 0 : The Inverse (Complement) of a 1 is always equal to 0. \n - 0\' = 1 : The Inverse (Complement) of a 0 is always equal to 1.</string>
+    <string name="distributive_law">Distributive Law – This law permits the multiplying or factoring out of an expression.\n - OR Distributive Law : A(B + C) = A.B + A.C \n - AND Distributive Law: A + (B.C) = (A + B).(A + C) </string>
+    <string name="absorptive_law">Absorptive Law – This law enables a reduction in a complicated expression to a simpler one by absorbing like terms.\n - OR Absorption Law : A + (A.B) = (A.1) + (A.B) = A(1 + B) = A  \n - AND Absorption Law: A(A + B) = (A + 0).(A + B) = A + (0.B) = A </string>
+    <string name="associative_law">Associative Law – This law allows the removal of brackets from an expression and regrouping of the variables.\n \nA + (B + C) = (A + B) + C = A + B + C    (OR Associate Law)\nA(B.C) = (A.B)C = A . B . C    (AND Associate Law)\nBoolean Algebra Functions\nUsing the information above, simple 2-input AND, OR and NOT Gates can be represented by 16 possible functions as shown in the following table.</string>
+
+    <string name="kmap">UNIT 4: Karnaugh Map</string>
+
+    <!-- Challenges -->
+    <string name="challenge_intro">Ready to squeeze some brain juice!!!</string>
     <string name="level_one">Level 1</string>
     <string name="level_two">Level 2</string>
     <string name="level_three">Level 3</string>
     <string name="level_four">Level 4</string>
     <string name="submit">SUBMIT</string>
+    <string name="try_one_start_off">Before you dig straight into building a logic circuit on the LogiKit, \nsome planning is necessary!!</string>
+    <string name="try_one_go_through_steps">\n\nLet\'s go through the steps to execute an efficient and working circuit together…</string>
+    <string name="step_one">Step 1</string>
+    <string name="try_two_subtt">Come up with a truth table that indicates the intended output.</string>
+    <string name="try_two">\n For a start let\'s use this truth table above</string>
+    <string name="step_two">Step 2</string>
+    <string name="try_three_subtt">Come up with Boolean Function</string>
+    <string name="try_three_qn">\nWhich XYZ (input) combinations outputs a \'1\' / HIGH ?\n</string>
+    <string name="try_three_ans1">The input combinations are : \n(X\' Y\' Z) ,  (X Y\' Z\') ,  (X Y\' Z) ,  (X Y Z\').</string>
+    <string name="try_three_ans2">Hence, the Boolean Function is \nf(X,Y,Z)  =  (X\' Y\' Z)  +  (X Y\' Z\')  +  (X Y\' Z)  +  (X Y Z\')</string>
+    <string name="step_three">Step 3</string>
+    <string name="try_four_subtt">Simplify Boolean Function to build the logic circuit efficiently</string>
+    <string name="try_four_ans1">There are 2 methods thatcan be used to conduct simplification on the Boolean Function:</string>
+    <string name="try_four_methods">1. Boolean Algebra \n\n2. Karnaugh Map</string>
 
 </resources>

@@ -13,7 +13,7 @@ import androidx.activity.ComponentActivity
 import androidx.core.content.ContextCompat
 
 
-class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
+class ChallengesLevelThree : ComponentActivity() , View.OnClickListener {
 
     private var mCurrentPosition:Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
@@ -35,7 +35,7 @@ class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
         opt4 = findViewById(R.id.option_four)
         submitbtn = findViewById(R.id.submit_button)
 
-        mQuestionsList = ConstantsLevelTwo.getQuestions()
+        mQuestionsList = ConstantsLevelThree.getQuestions()
 
         setQuestion()
 
@@ -119,11 +119,11 @@ class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
                             setQuestion()
                         }else ->{
                             val intent = Intent(this,ResultActivity::class.java)
-                            intent.putExtra(ConstantsLevelTwo.CORRECT_ANSWERS,mCorrectAnswers)
-                            intent.putExtra(ConstantsLevelTwo.TOTAL_QUESTIONS,mQuestionsList!!.size)
+                            intent.putExtra(ConstantsLevelThree.CORRECT_ANSWERS,mCorrectAnswers)
+                            intent.putExtra(ConstantsLevelThree.TOTAL_QUESTIONS,mQuestionsList!!.size)
 
 //                            if (mCorrectAnswers >= 5){ChallengesMain.}
-//                        else{intent.putExtra(ConstantsLevelTwo.PASS_QUIZ,false)}
+//                        else{intent.putExtra(ConstantsLevelThree.PASS_QUIZ,false)}
                             startActivity(intent)
                             Toast.makeText(this,
                                 "You have successfully completed this challenge",

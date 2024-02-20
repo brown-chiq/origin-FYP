@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
 
         val logicKitButton = findViewById<Button>(logikit_button)
         logicKitButton.setOnClickListener {
-            val intent = Intent(this, KitManual::class.java)
+            val intent = Intent(this, KitMain::class.java)
             startActivity(intent)
         }
 
