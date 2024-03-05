@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrashCourseLogicTopic8">
+    tools:context=".CrashCourseLogicTopic9">
 
     <ImageView
         android:id="@+id/back_button"
@@ -21,24 +21,26 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
         android:padding="16dp"
+        android:progress="12"
         app:layout_constraintBottom_toTopOf="@id/done"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_notes" />
+        app:layout_constraintTop_toBottomOf="@id/lv_notes"
+        app:layout_constraintVertical_bias="0.505" />
 
     <Button
-        android:id="@+id/next_page"
+        android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:gravity="center"
         android:padding="16dp"
-        android:text="@string/next_page"
+        android:text="@string/done"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,40 +67,31 @@
         android:gravity="center"
         android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/back_button"
-        app:layout_constraintBottom_toTopOf="@id/next_page">
+        app:layout_constraintBottom_toTopOf="@id/done">
 
         <TextView
-            android:id="@+id/logic_operations_summary"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Let's test your understanding!"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="20sp"/>
+
+        <Button
+            android:id="@+id/level_one_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_one"
+            android:clickable="true"
             android:padding="20sp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:text="@string/summary"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/summary_image"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:contentDescription="TODO"
-            android:gravity="center"
-            android:padding="10sp"
-            android:src="@drawable/summary" />
-
-        <ImageView
-            android:id="@+id/summarytt_image"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:contentDescription="TODO"
-            android:gravity="center"
-            android:padding="10sp"
-            android:src="@drawable/summarytt" />
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/level_two"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

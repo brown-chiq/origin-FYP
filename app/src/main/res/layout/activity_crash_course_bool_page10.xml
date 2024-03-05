@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrashCourseLogicTopic8">
+    tools:context=".CrashCourseBoolPage10">
 
     <ImageView
         android:id="@+id/back_button"
@@ -26,10 +26,9 @@
         android:layout_margin="20sp"
         android:gravity="center"
         android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@id/done"
+        app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_notes" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/next_page"
@@ -68,36 +67,25 @@
         app:layout_constraintBottom_toTopOf="@id/next_page">
 
         <TextView
-            android:id="@+id/logic_operations_summary"
-            android:layout_width="wrap_content"
+            android:id="@+id/distributive_law"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/distributive_law"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="40sp"
             android:padding="20sp"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:text="@string/summary"
-            android:textColor="@color/black"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:id="@+id/distributive_law_exp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/distributive_law_exp"
+            android:gravity="start"
             android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/summary_image"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:contentDescription="TODO"
-            android:gravity="center"
-            android:padding="10sp"
-            android:src="@drawable/summary" />
-
-        <ImageView
-            android:id="@+id/summarytt_image"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:contentDescription="TODO"
-            android:gravity="center"
-            android:padding="10sp"
-            android:src="@drawable/summarytt" />
+            android:padding="20sp"
+            android:layout_margin="20dp" />
 
     </LinearLayout>
 

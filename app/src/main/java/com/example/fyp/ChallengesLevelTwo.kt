@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat
 class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
 
     private var mCurrentPosition:Int = 1
-    private var mQuestionsList: ArrayList<Question>? = null
+    private var mQuestionsList: ArrayList<QuestionLvl2>? = null
     private var mSelectedOptionPosition:Int = 0
     private var mCorrectAnswers:Int = 0
 
@@ -27,7 +27,7 @@ class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
     private lateinit var submitbtn: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_challenges_levels_layout)
+        setContentView(R.layout.activity_challenges_level2_layout)
 
         opt1 = findViewById(R.id.option_one)
         opt2 = findViewById(R.id.option_two)
@@ -68,8 +68,6 @@ class ChallengesLevelTwo : ComponentActivity() , View.OnClickListener {
 
         var qnStatement = findViewById<TextView>(R.id.quesion)
         qnStatement.text = question!! .questions
-        var qnImage = findViewById<ImageView>(R.id.qn_image)
-        qnImage.setImageResource(question.image)
 
         opt1.text = question.optionOne
         opt2.text = question.optionTwo

@@ -10,11 +10,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.ComponentActivity
 
-class CrashCourseLogicTopic8 : ComponentActivity() {
+class CrashCourseBoolPage11 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crash_course_logic_topic8)
-
+        setContentView(R.layout.activity_crash_course_bool_page11)
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
             val intent = Intent(this, CrashCourseMain::class.java)
@@ -23,15 +22,17 @@ class CrashCourseLogicTopic8 : ComponentActivity() {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
-        var doneButton = findViewById<Button>(R.id.next_page)
-        doneButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseLogicTopic9::class.java)
+        var nextButton = findViewById<Button>(R.id.next_page)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, CrashCourseBoolPage12::class.java)
             startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         var prevButton = findViewById<Button>(R.id.prev_page)
         prevButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseLogicTopic7::class.java)
+            val intent = Intent(this, CrashCourseBoolPage10::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
@@ -50,8 +51,9 @@ class CrashCourseLogicTopic8 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 87F, 100F)
+        val anim = ProgressBarAnimation(progressBar, 80F, 90F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
+
     }
 }

@@ -57,17 +57,23 @@
     <string name="identity_law_exp">A term OR\'ed with a “0” or AND\'ed with a “1” will always equal that term.\n \n- A + 0 = A   \n A variable OR\'ed with 0 is always equal to the variable.\n\n- A . 1 = A    \n A variable AND\'ed with 1 is always equal to the variable.\n </string>
     <string name="idempotent_law">Idempotent Law</string>
     <string name="idempotent_law_exp">An input that is AND\'ed or OR\'ed with itself is equal to that input. \n \n- A + A = A   \n A variable OR\'ed with itself is always equal to the variable.\n\n- A . A = A    \n A variable AND\'ed with itself is always equal to the variable.\n </string>
-    <!-- yet to add into crash course unit 3 -->
-    <string name="complement_law">Complement Law – A term AND\'ed with its complement equals “0” and a term OR\'ed with its complement equals “1”\n \nA . A = 0    A variable AND\'ed with its complement is always equal to 0\nA + A = 1    A variable OR\'ed with its complement is always equal to 1\n </string>
-    <string name="commutative_law">Commutative Law – The order of application of two separate terms is not important\n \nA . B = B . A    The order in which two variables are AND\'ed makes no difference\nA + B = B + A : The order in which two variables are OR\'ed makes no difference\n</string>
-    <string name="double_negation_law">Double Negation Law – A term that is inverted twice is equal to the original term\n \nA = A     A double complement of a variable is always equal to the variable\n</string>
-    <string name="de_morgans_theorem">de Morgan\'s Theorem – There are two “de Morgan\'s” rules or theorems,\n \n(1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:  A+B = A . B\n \n(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:  A.B = A + B</string>
-    <string name="other_algebraic_law">Other algebraic Laws of Boolean not detailed above include:\n</string>
-    <string name="boolean_postulates">Boolean Postulates – While not Boolean Laws in their own right, these are a set of Mathematical Laws which can be used in the simplification of Boolean Expressions.\n\n - 0 . 0 = 0 : A 0 AND\'ed with itself is always equal to 0. \n - 1 . 1 = 1 : A 1 AND\'ed with itself is always equal to 1\n - 1 . 0 = 0: A 1 AND\'ed with a 0 is equal to 0 \n - 0 + 0 = 0 : A 0 OR\'ed with itself is always equal to 0 \n - 1 + 1 = 1: A 1 OR\'ed with itself is always equal to 1. \n - 1 + 0 = 1 : A 1 OR\'ed with a 0 is equal to 1. \n- 1\' = 0 : The Inverse (Complement) of a 1 is always equal to 0. \n - 0\' = 1 : The Inverse (Complement) of a 0 is always equal to 1.</string>
-    <string name="distributive_law">Distributive Law – This law permits the multiplying or factoring out of an expression.\n - OR Distributive Law : A(B + C) = A.B + A.C \n - AND Distributive Law: A + (B.C) = (A + B).(A + C) </string>
-    <string name="absorptive_law">Absorptive Law – This law enables a reduction in a complicated expression to a simpler one by absorbing like terms.\n - OR Absorption Law : A + (A.B) = (A.1) + (A.B) = A(1 + B) = A  \n - AND Absorption Law: A(A + B) = (A + 0).(A + B) = A + (0.B) = A </string>
-    <string name="associative_law">Associative Law – This law allows the removal of brackets from an expression and regrouping of the variables.\n \nA + (B + C) = (A + B) + C = A + B + C    (OR Associate Law)\nA(B.C) = (A.B)C = A . B . C    (AND Associate Law)\nBoolean Algebra Functions\nUsing the information above, simple 2-input AND, OR and NOT Gates can be represented by 16 possible functions as shown in the following table.</string>
-
+    <string name="complement_law">Complement Law</string>
+    <string name="complement_law_exp">A term AND\'ed with its complement equals “0” and a term OR\'ed with its complement equals “1”. \n \n- A . A = 0   \n A variable AND\'ed with its complement is always equal to 0. \n\n- A + A = 1   \n A variable OR\'ed with its complement is always equal to 1.\n </string>
+    <string name="commutative_law">Commutative Law</string>
+    <string name="commutative_law_exp">The order of application of two separate terms is not important. \n \n- A . B = B . A  \n The order in which two variables are AND\'ed makes no difference. \n \n- A + B = B + A   \n The order in which two variables are OR\'ed makes no difference.\n</string>
+    <string name="double_negation_law">Double Negation Law </string>
+    <string name="double_negation_law_exp">A term that is inverted twice is equal to the original term. \n \n- A = A  \n A double complement of a variable is always equal to the variable.\n</string>
+    <string name="de_morgans_theorem">de Morgan\'s Theorem</string>
+    <string name="de_morgans_theorem_exp">There are two “de Morgan\'s” rules or theorems,\n \n(1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:  A+B = A . B\n \n(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:  A.B = A + B</string>
+    <string name="boolean_postulates">Boolean Postulates</string>
+    <string name="boolean_postulates_exp">These are a set of Mathematical Laws which can be used in the simplification of Boolean Expressions. \n \n- 0 . 0 = 0   \n A 0 AND\'ed with itself is always equal to 0. \n \n- 1 . 1 = 1   \n A 1 AND\'ed with itself is always equal to 1. \n \n- 1 . 0 = 0   \n A 1 AND\'ed with a 0 is equal to 0. \n \n- 0 + 0 = 0   \n A 0 OR\'ed with itself is always equal to 0. \n \n- 1 + 1 = 1   \n A 1 OR\'ed with itself is always equal to 1. \n \n- 1 + 0 = 1   \n A 1 OR\'ed with a 0 is equal to 1. \n \n- 1\' = 0   \n The Inverse (Complement) of a 1 is always equal to 0. \n \n- 0\' = 1   \n The Inverse (Complement) of a 0 is always equal to 1.</string>
+    <string name="distributive_law">Distributive Law </string>
+    <string name="distributive_law_exp">This law permits the multiplying or factoring out of an expression. \n \n- OR Distributive Law : A(B + C) = A.B + A.C  \n \n- AND Distributive Law: A + (B.C) = (A + B).(A + C) </string>
+    <string name="absorptive_law">Absorptive Law </string>
+    <string name="absorptive_law_exp">This law enables a reduction in a complicated expression to a simpler one by absorbing like terms. \n \n- OR Absorption Law : A + (A.B) = (A.1) + (A.B) = A(1 + B) = A \n \n- AND Absorption Law: A(A + B) = (A + 0).(A + B) = A + (0.B) = A </string>
+    <string name="associative_law">Associative Law </string>
+    <string name="associative_law_exp">This law allows the removal of brackets from an expression and regrouping of the variables. \n \n- OR Associate Law : A + (B + C) = (A + B) + C = A + B + C \n \n- AND Associate Law : A(B.C) = (A.B)C = A . B . C  </string>
+   
     <string name="kmap">UNIT 4: Karnaugh Map</string>
 
     <!-- Challenges -->

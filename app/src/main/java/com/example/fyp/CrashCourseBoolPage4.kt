@@ -8,8 +8,9 @@ import android.view.animation.Transformation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.activity.ComponentActivity
 
-class CrashCourseBoolPage4 : AppCompatActivity() {
+class CrashCourseBoolPage4 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crash_course_bool_page4)
@@ -23,7 +24,7 @@ class CrashCourseBoolPage4 : AppCompatActivity() {
 
         var nextButton = findViewById<Button>(R.id.next_page)
         nextButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseBoolPage4::class.java)
+            val intent = Intent(this, CrashCourseBoolPage5::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)

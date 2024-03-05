@@ -25,7 +25,7 @@ class CrashCourseBoolPage3 : ComponentActivity() {
 
         var nextButton = findViewById<Button>(R.id.next_page)
         nextButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseBoolPage3::class.java)
+            val intent = Intent(this, CrashCourseBoolPage4::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
