@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:padding="20sp"
-        android:text="@string/logikit_manual"
+        android:text="@string/logikit_connection"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/sample_button"
         app:layout_constraintEnd_toEndOf="parent"

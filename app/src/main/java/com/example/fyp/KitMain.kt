@@ -11,13 +11,13 @@ class KitMain : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kit_main)
 
-//        var manualButton = findViewById<Button>(R.id.manual_button)
-//        manualButton.setOnClickListener {
-//            val intent = Intent(this, Manual1::class.java)
-//            startActivity(intent)
-//            @Suppress("DEPRECATION")
-//            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-//        }
+        var manualButton = findViewById<Button>(R.id.manual_button)
+        manualButton.setOnClickListener {
+            val intent = Intent(this, InputSelection::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
 
         var sampleButton = findViewById<Button>(R.id.sample_button)
         sampleButton.setOnClickListener {
