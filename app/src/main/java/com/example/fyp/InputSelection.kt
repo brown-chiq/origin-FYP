@@ -5,12 +5,14 @@ import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothSocket
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -58,6 +60,14 @@ class InputSelection : ComponentActivity() {
 
         // Connect to selected Bluetooth device
         connectToDevice(btConnectionStatus)
+
+        var backButton = findViewById<ImageView>(R.id.back_button)
+        backButton.setOnClickListener {
+            val intent = Intent(this, KitMain::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        }
 
         inputOneHigh.setOnClickListener {
             sendCommand(1, 1)
@@ -170,7 +180,7 @@ class InputSelection : ComponentActivity() {
     }
 
     private fun sendCommand(LEDIndex: Int, value: Int) {
-        val command = "$LEDIndex,$value\n"
+        val command = "$LEDIndex,$value,9\n"
         try {
             outputStream?.write(command.toByteArray())
             Log.d("Command", command)
