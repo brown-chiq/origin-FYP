@@ -8,9 +8,11 @@ import android.bluetooth.BluetoothSocket
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Switch
@@ -36,6 +38,7 @@ class LogiKitTruthTable : ComponentActivity() {
     var bluetoothSocket: BluetoothSocket? = null
     var outputStream: OutputStream? = null
     var inputStream: InputStream? = null
+
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,41 +74,44 @@ class LogiKitTruthTable : ComponentActivity() {
         val o2 = findViewById<Switch>(R.id.output2)
         val o3 = findViewById<Switch>(R.id.output3)
 
-        Log.d("TruthTable",i1.text.toString())
+        Log.d("TruthTable", i1.text.toString())
 
 
-        val switches = arrayOf(i1, i2, i3, i4, i5, i6, o1, o2,o3 )
+        val switches = arrayOf(i1, i2, i3, i4, i5, i6, o1, o2, o3)
 
         var rows = 0
-        var numInput : Int = 0
+        var numInput: Int = 0
         var columns = 0
         var switchesChecked = arrayListOf<String>()
 
         buttonGenerate.setOnClickListener {
+
             for (switch in switches) {
-                if(switch.isChecked) {
+                if (switch.isChecked) {
                     columns++
                     val switchChecked = switch.text.toString()
-                    Log.d("TruthTable","$switchChecked is checked")
+                    Log.d("TruthTable", "$switchChecked is checked")
                     switchesChecked.add(switchChecked)
                 }
 
-                if(switch.isChecked && (switch==i1 || switch==i2 || switch==i3 || switch==i4 || switch==i5 || switch==i6)) {
+                if (switch.isChecked && (switch == i1 || switch == i2 || switch == i3 || switch == i4 || switch == i5 || switch == i6)) {
                     numInput++
                 }
             }
 
-            Log.d("TruthTable","num of input $numInput")
-            Log.d("TruthTable","Switches Checked are : $switchesChecked")
+            Log.d("TruthTable", "num of input $numInput")
+            Log.d("TruthTable", "Switches Checked are : $switchesChecked")
 
             rows = 1 + 2.0.pow(numInput).toInt()
 
-            Log.d("TruthTable","Rows: $rows, Columns: $columns")
+            Log.d("TruthTable", "Rows: $rows, Columns: $columns")
 
             generateTable(rows, columns, numInput, switchesChecked, tableLayout)
             rows = 0
             columns = 0
             numInput = 0
+            switchesChecked.clear()
+
         }
 
 //        inputOneHigh.setOnClickListener {
@@ -115,170 +121,202 @@ class LogiKitTruthTable : ComponentActivity() {
 
     }
 
-    private fun generateTable(rows: Int, columns: Int, numInput: Int,switchesChecked: ArrayList<String>, tableLayout: TableLayout) {
+    private fun generateTable(
+        rows: Int,
+        columns: Int,
+        numInput: Int,
+        switchesChecked: ArrayList<String>,
+        tableLayout: TableLayout
+    ) {
         tableLayout.removeAllViews() // Clear existing content
+
+        val inputSequenceGenerated: ArrayList<String> = generateTruthTableInputSequence(numInput)
+        var binNum : String
+        var binInArray = arrayListOf<String>()
 
         for (i in 0 until rows) {
             val tableRow = TableRow(this)
             tableRow.layoutParams = TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
-                TableRow.LayoutParams.WRAP_CONTENT
+                TableRow.LayoutParams.WRAP_CONTENT,
             )
+            binInArray.clear()
+
+            binNum = inputSequenceGenerated[i]
+            Log.d("TruthTable", "binNum: $binNum")
+            for (char in binNum) {
+                binInArray.add(char.toString())
+                Log.d("TruthTable", "binInArray : $binInArray")
+            }
 
             for (j in 0 until columns) {
                 val textView = TextView(this)
-                var inputSequenceGenerated: ArrayList<String>
+                textView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
 
-                if(i==0){ //header title
+                if (i == 0) { //header title
                     textView.text = switchesChecked[j]
-                }
-                else { //binary combinations
-//                    if(i<numInput){//generate truthtable input
-                        textView.text = "Row $i, Col $j"
-//                        inputSequenceGenerated = generateTruthTableInputSequence(numInput)
-//                    }else{
+                    textView.setTypeface(null, Typeface.BOLD)
+                } else { //binary combinations
+
+                    if (j < numInput) {//generate truthtable input
+                        Log.d("TruthTable", "j $j")
+                        var switch  = switchesChecked[j]
+                        var input =binInArray[j]
+                            Log.d("TruthTable", "Row $i $switch $input")
+                            textView.text = input
+//                        }
+//
+                    } else {
 //                        listen output from arduino
-//                    }
+                    }
                 }
                 textView.setPadding(10, 10, 10, 10)
 
                 tableRow.addView(textView)
-                Log.d("TableGeneration","row $j completed")
             }
+
             tableLayout.addView(tableRow)
-            Log.d("TableGeneration","column $i completed")
         }
     }
 
-    private fun generateTruthTableInputSequence(numInputs: Int) :ArrayList<String>{
-        val textView = TextView(this)
-        var inputSequence = arrayListOf<String>()
-        val maxNumber = (1 shl numInputs) - 1 // Calculate the maximum number using bit shifting
-        Log.d("TruthTable","Truth Table Input Sequence with $numInputs inputs")
-        Log.d("TruthTable","Truth Table Input Sequence Max Number $maxNumber ")
-        for (i in 0..maxNumber) {
+        private fun generateTruthTableInputSequence(numInputs: Int): ArrayList<String> {
+//        val textView = TextView(this)
+            var inputSequence = arrayListOf<String>()
+            val maxNumber = (1 shl numInputs) - 1 // Calculate the maximum number using bit shifting
+            Log.d("TruthTable", "Truth Table Input Sequence with $numInputs inputs")
+            Log.d("TruthTable", "Truth Table Input Sequence Max Number $maxNumber ")
+
+            inputSequence.add(toBinary(maxNumber, numInputs))
+
+            for (i in 0..maxNumber) {
 //            Log.d("TruthTable", toBinary(i, numInputs))
-            toBinary(i, numInputs).toString()
-            inputSequence.add(toBinary(i, numInputs))
+
+                inputSequence.add(toBinary(i, numInputs))
+            }
+            Log.d("TruthTable", "Input Sequence : $inputSequence")
+
+            return inputSequence
         }
-        Log.d("TruthTable","Input Sequence : $inputSequence")
 
-        return inputSequence
-    }
-
-    private fun toBinary(num: Int, length: Int): String {
-        return String.format("%" + length + "s", Integer.toBinaryString(num)).replace(' ', '0')
-    }
-
-
-
-    private fun requestBluetoothPermissions() {
-        if (Build.VERSION.SDK_INT > 31 &&
-            ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(Manifest.permission.BLUETOOTH_CONNECT),
-                100
-            )
+        private fun toBinary(num: Int, length: Int): String {
+            return String.format("%" + length + "s", Integer.toBinaryString(num)).replace(' ', '0')
         }
-    }
 
-    @SuppressLint("MissingPermission")
-    private fun findPairedDevices() {
-        val pairedDevices = bluetoothAdapter?.bondedDevices
-        pairedDevices?.forEach { device ->
-            if (device.name == "HC-05") {
-                macAddress = device.address
-                bluetoothDevice = device
+
+        private fun requestBluetoothPermissions() {
+            if (Build.VERSION.SDK_INT > 31 &&
+                ActivityCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.BLUETOOTH_CONNECT
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.BLUETOOTH_CONNECT),
+                    100
+                )
             }
         }
-    }
 
-    @SuppressLint("MissingPermission")
-    private fun connectToDevice(connectionStatus : TextView) {
-        if (bluetoothDevice != null) {
-            Thread {
+        @SuppressLint("MissingPermission")
+        private fun findPairedDevices() {
+            val pairedDevices = bluetoothAdapter?.bondedDevices
+            pairedDevices?.forEach { device ->
+                if (device.name == "HC-05") {
+                    macAddress = device.address
+                    bluetoothDevice = device
+                }
+            }
+        }
+
+        @SuppressLint("MissingPermission")
+        private fun connectToDevice(connectionStatus: TextView) {
+            if (bluetoothDevice != null) {
+                Thread {
+                    try {
+                        bluetoothSocket = bluetoothDevice!!.createRfcommSocketToServiceRecord(uuid)
+                        bluetoothAdapter?.cancelDiscovery()
+                        bluetoothSocket?.connect()
+                        outputStream = bluetoothSocket?.outputStream
+                        inputStream = bluetoothSocket?.inputStream
+                        runOnUiThread {
+                            Log.d("Bluetooth", "Bluetooth successfully connected")
+                            Toast.makeText(
+                                this@LogiKitTruthTable,
+                                "Bluetooth successfully connected",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            connectionStatus.setText("Connected to LogiKit")
+                            connectionStatus.setTextColor(Color.parseColor("#7CFC00"))
+                        }
+                    } catch (e: IOException) {
+                        runOnUiThread {
+                            Log.d(
+                                "Bluetooth",
+                                "Turn on Bluetooth, connect with HC-05 and restart the app"
+                            )
+                            Toast.makeText(
+                                this@LogiKitTruthTable,
+                                "Turn on Bluetooth, connect with HC-05 and restart the app",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            connectionStatus.setText("Not connected to LogiKit, Please Try Again")
+                            connectionStatus.setTextColor(Color.parseColor("#FF0000"))
+                        }
+                        e.printStackTrace()
+                    }
+                }.start()
+            }
+        }
+
+        private fun sendCommand(LEDIndex: Int, value: Int) {
+            val command = "$LEDIndex,$value,9\n"
+            try {
+                outputStream?.write(command.toByteArray())
+                Log.d("Command", command)
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }
+
+        fun getOutput(): String {
+            val buffer = ByteArray(1024)
+            var bytes = 0 // bytes returned from read()
+            var numberOfReadings = 0 //to control the number of readings from the Arduino
+            var readMessage = ""
+
+            // Keep listening to the InputStream until an exception occurs.
+            //We just want to get 1 temperature readings from the Arduino
+            while (numberOfReadings < 1) {
                 try {
-                    bluetoothSocket = bluetoothDevice!!.createRfcommSocketToServiceRecord(uuid)
-                    bluetoothAdapter?.cancelDiscovery()
-                    bluetoothSocket?.connect()
-                    outputStream = bluetoothSocket?.outputStream
-                    inputStream = bluetoothSocket?.inputStream
-                    runOnUiThread {
-                        Log.d("Bluetooth","Bluetooth successfully connected")
-                        Toast.makeText(
-                            this@LogiKitTruthTable,
-                            "Bluetooth successfully connected",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        connectionStatus.setText("Connected to LogiKit")
-                        connectionStatus.setTextColor(Color.parseColor("#7CFC00"))
+                    val byte = inputStream?.read(buffer) ?: -1
+
+                    if (byte != -1) {
+                        val charRead =
+                            buffer[0].toChar() // assuming it's a single character message
+                        if (charRead == '\n') {
+                            Log.d(TAG, readMessage)
+                            numberOfReadings++
+                        } else {
+                            readMessage += charRead
+                        }
                     }
                 } catch (e: IOException) {
-                    runOnUiThread {
-                        Log.d("Bluetooth","Turn on Bluetooth, connect with HC-05 and restart the app")
-                        Toast.makeText(
-                            this@LogiKitTruthTable,
-                            "Turn on Bluetooth, connect with HC-05 and restart the app",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        connectionStatus.setText("Not connected to LogiKit, Please Try Again")
-                        connectionStatus.setTextColor(Color.parseColor("#FF0000"))
-                    }
-                    e.printStackTrace()
+                    Log.d(TAG, "Input stream was disconnected", e)
+                    break
                 }
-            }.start()
+            }
+            return readMessage
         }
-    }
 
-    private fun sendCommand(LEDIndex: Int, value: Int) {
-        val command = "$LEDIndex,$value,9\n"
-        try {
-            outputStream?.write(command.toByteArray())
-            Log.d("Command", command)
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
 
-    fun getOutput(): String {
-        val buffer = ByteArray(1024)
-        var bytes = 0 // bytes returned from read()
-        var numberOfReadings = 0 //to control the number of readings from the Arduino
-        var readMessage = ""
-
-        // Keep listening to the InputStream until an exception occurs.
-        //We just want to get 1 temperature readings from the Arduino
-        while (numberOfReadings < 1) {
+        override fun onDestroy() {
+            super.onDestroy()
             try {
-                val byte = inputStream?.read(buffer) ?: -1
-
-                if (byte != -1) {
-                    val charRead = buffer[0].toChar() // assuming it's a single character message
-                    if (charRead == '\n') {
-                        Log.d(TAG, readMessage)
-                        numberOfReadings++
-                    } else {
-                        readMessage += charRead
-                    }
-                }
+                outputStream?.close()
+                bluetoothSocket?.close()
             } catch (e: IOException) {
-                Log.d(TAG, "Input stream was disconnected", e)
-                break
+                e.printStackTrace()
             }
         }
-        return readMessage
     }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        try {
-            outputStream?.close()
-            bluetoothSocket?.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
-}

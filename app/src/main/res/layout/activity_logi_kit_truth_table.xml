@@ -41,6 +41,7 @@
         android:textOff="INPUT 1 UNSELECTED"
         android:textOn="INPUT 1 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/connection_status"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -55,6 +56,7 @@
         android:textOff="INPUT 2 UNSELECTED"
         android:textOn="INPUT 2 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch1"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -69,6 +71,7 @@
         android:textOff="INPUT 3 UNSELECTED"
         android:textOn="INPUT 3 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch2"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -83,6 +86,7 @@
         android:textOff="INPUT 4 UNSELECTED"
         android:textOn="INPUT 4 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch3"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -97,6 +101,7 @@
         android:textOff="INPUT 5 UNSELECTED"
         android:textOn="INPUT 5 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch4"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -111,6 +116,7 @@
         android:textOff="INPUT 6 UNSELECTED"
         android:textOn="INPUT 6 SELECTED"
         android:padding="10sp"
+        android:layout_marginStart="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch5"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -123,6 +129,7 @@
         android:padding="10sp"
         android:switchPadding="20sp"
         android:textSize="20sp"
+        android:layout_marginEnd="20sp"
         android:text="Output 1"
         android:textOff="OUTPUT 1 UNSELECTED"
         android:textOn="OUTPUT 1 SELECTED"
@@ -136,6 +143,7 @@
         android:layout_height="wrap_content"
         android:switchPadding="20sp"
         android:textSize="20sp"
+        android:layout_marginEnd="20sp"
         android:text="Output 2"
         android:textOff="OUTPUT 2 UNSELECTED"
         android:textOn="OUTPUT 2 SELECTED"
@@ -154,6 +162,7 @@
         android:textOff="OUTPUT 3 UNSELECTED"
         android:textOn="OUTPUT 3 SELECTED"
         android:padding="10sp"
+        android:layout_marginEnd="20sp"
         app:layout_constraintTop_toBottomOf="@+id/switch5"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -164,7 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Generate Table"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/output3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,27 +181,35 @@
         android:layout_margin="30sp"/>
 
 
-
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/buttonGenerate"
-        app:layout_constraintBottom_toBottomOf="parent">
-
         <!-- Table layout to hold dynamic content -->
-        <ScrollView
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonGenerate">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="40dp"
+            android:id="@+id/tableContainer"
+            android:orientation="vertical">
 
             <TableLayout
                 android:id="@+id/tableLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </ScrollView>
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:textAlignment="center"
+                android:textSize="60sp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
