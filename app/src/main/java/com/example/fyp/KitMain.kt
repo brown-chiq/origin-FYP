@@ -11,13 +11,22 @@ class KitMain : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kit_main)
 
-        var manualButton = findViewById<Button>(R.id.manual_button)
+        var manualButton = findViewById<Button>(R.id.logikit_input_set)
         manualButton.setOnClickListener {
             val intent = Intent(this, InputSelection::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
+
+        var truthtableGen = findViewById<Button>(R.id.truthtable_gen)
+        truthtableGen.setOnClickListener {
+            val intent = Intent(this, LogiKitTruthTable::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
 
         var sampleButton = findViewById<Button>(R.id.sample_button)
         sampleButton.setOnClickListener {

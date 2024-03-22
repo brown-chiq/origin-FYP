@@ -55,5 +55,7 @@ class CrashCourseIntroTopic2 : ComponentActivity() {
         anim.duration = 1000
         progressBar.startAnimation(anim)
 
+
+
     }
 }

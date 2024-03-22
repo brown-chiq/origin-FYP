@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogiKitTruthTable">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="26sp"
+        android:layout_height="26sp"
+        android:layout_margin="20sp"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Waiting for Connection Status... "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:padding="20sp"
+        app:layout_constraintTop_toBottomOf="@id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:text="Input 1"
+        android:textSize="20sp"
+        android:textOff="INPUT 1 UNSELECTED"
+        android:textOn="INPUT 1 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:text="Input 2"
+        android:textSize="20sp"
+        android:textOff="INPUT 2 UNSELECTED"
+        android:textOn="INPUT 2 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:textSize="20sp"
+        android:text="Input 3"
+        android:textOff="INPUT 3 UNSELECTED"
+        android:textOn="INPUT 3 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:textSize="20sp"
+        android:text="Input 4"
+        android:textOff="INPUT 4 UNSELECTED"
+        android:textOn="INPUT 4 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:textSize="20sp"
+        android:text="Input 5"
+        android:textOff="INPUT 5 UNSELECTED"
+        android:textOn="INPUT 5 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:switchPadding="20sp"
+        android:text="Input 6"
+        android:textOff="INPUT 6 UNSELECTED"
+        android:textOn="INPUT 6 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/output1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="10sp"
+        android:switchPadding="20sp"
+        android:textSize="20sp"
+        android:text="Output 1"
+        android:textOff="OUTPUT 1 UNSELECTED"
+        android:textOn="OUTPUT 1 SELECTED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/output2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:textSize="20sp"
+        android:text="Output 2"
+        android:textOff="OUTPUT 2 UNSELECTED"
+        android:textOn="OUTPUT 2 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch3"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/output3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20sp"
+        android:text="Output 3"
+        android:textSize="20sp"
+        android:textOff="OUTPUT 3 UNSELECTED"
+        android:textOn="OUTPUT 3 SELECTED"
+        android:padding="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/switch5"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <!-- Button to trigger generation -->
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Table"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/output3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="20dp"
+        android:layout_margin="30sp"/>
+
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/buttonGenerate"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Table layout to hold dynamic content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

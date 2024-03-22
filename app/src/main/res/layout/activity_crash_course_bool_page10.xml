@@ -21,9 +21,9 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
+        android:progressTint="@color/navy_700"
         android:gravity="center"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/next_page"
@@ -71,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/distributive_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -78,13 +79,45 @@
             android:layout_margin="20dp" />
 
         <TextView
-            android:id="@+id/distributive_law_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/distributive_law_exp"
+            android:text="This law permits the multiplying or factoring out of an expression."
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:text="- OR Distributive Law :"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A . ( B + C ) = A . B + A . C"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- AND Distributive Law:"
+            android:paddingTop="50dp"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A + (B . C) = (A + B).(A + C) "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
             android:layout_margin="20dp" />
 
     </LinearLayout>

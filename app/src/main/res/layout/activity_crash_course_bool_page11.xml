@@ -21,10 +21,10 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
+        android:progressTint="@color/navy_700"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/absorptive_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -78,13 +79,45 @@
             android:layout_margin="20dp" />
 
         <TextView
-            android:id="@+id/absorptive_law_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="start"
+            android:text="This law enables a reduction in a complicated expression to a simpler one by absorbing like terms."
+            android:textSize="30sp" />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/absorptive_law_exp"
+            android:paddingTop="50dp"
+            android:text="- OR Distributive Law :"
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A + (A . B) = (A . 1) + (A . B) = A . (1 + B) = A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:text="- AND Distributive Law :"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" A . (A + B) = (A + 0).(A + B) = A + (0 . B) = A  "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
             android:layout_margin="20dp" />
 
     </LinearLayout>

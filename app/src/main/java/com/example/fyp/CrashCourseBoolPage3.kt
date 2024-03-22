@@ -52,7 +52,7 @@ class CrashCourseBoolPage3 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 60F, 80F)
+        val anim = ProgressBarAnimation(progressBar, 20F, 27F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
     }

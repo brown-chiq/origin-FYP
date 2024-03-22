@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -72,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/annulment_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -79,15 +80,47 @@
             android:layout_margin="20dp" />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" A term AND\'ed with a “0” equals 0 or OR\'ed with a “1” will equal 1.  "
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A . 0 = 0"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A variable AND\'ed with 0 is always equal to 0."
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+
+            android:text="A + 1 = 1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
             android:id="@+id/annulment_law_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/annulment_law_explanation"
+            android:text="A variable OR\'ed with 1 is always equal to 1."
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
             android:layout_margin="20dp" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

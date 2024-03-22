@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -72,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/commutative_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -79,15 +80,48 @@
             android:layout_margin="20dp" />
 
         <TextView
-            android:id="@+id/commutative_law_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/commutative_law_exp"
+            android:text="The order of application of two separate terms is not important."
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
             android:layout_margin="20dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A . B = B . A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The order in which two variables are AND\'ed makes no difference."
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A + B = B + A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The order in which two variables are OR\'ed makes no difference."
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

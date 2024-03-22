@@ -1,7 +1,6 @@
 package com.example.fyp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.Transformation
@@ -51,7 +50,7 @@ class CrashCourseBoolPage12 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 80F, 90F)
+        val anim = ProgressBarAnimation(progressBar, 84F, 90F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
 

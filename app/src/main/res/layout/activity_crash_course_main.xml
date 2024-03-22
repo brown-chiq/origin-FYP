@@ -11,39 +11,40 @@
         android:id="@+id/intro_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/intro"
         android:clickable="true"
-        android:textAllCaps="false"
         android:padding="20sp"
-        android:textSize="20sp"
-        android:layout_marginStart="100sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/intro"
+        android:textAllCaps="false"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/logic_operations_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logic_operations_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/logic_operations_title"
         android:padding="20sp"
+        android:text="@string/logic_operations_title"
         android:textAllCaps="false"
-        android:textSize="20sp"
-        android:layout_marginStart="100sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/bool_fun_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/intro_button" />
+
     <Button
         android:id="@+id/bool_fun_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boolean_algebra"
         android:padding="20sp"
-        android:textSize="20sp"
+        android:text="@string/boolean_algebra"
         android:textAllCaps="false"
-        android:layout_marginStart="100sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/kmap_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logic_operations_button" />
 
     <Button
@@ -51,11 +52,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20sp"
-        android:textAllCaps="false"
         android:text="@string/kmap"
-        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="100sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bool_fun_button" />
 

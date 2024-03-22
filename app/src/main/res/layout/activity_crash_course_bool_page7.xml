@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -72,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/double_negation_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -79,13 +80,27 @@
             android:layout_margin="20dp" />
 
         <TextView
-            android:id="@+id/double_negation_law_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/double_negation_law_exp"
+            android:text="A term that is inverted twice is equal to the original term."
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" A\'\' = A "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A double complement of a variable is always equal to the variable."
+             android:gravity="start"
+            android:textSize="30sp"
             android:layout_margin="20dp" />
 
     </LinearLayout>

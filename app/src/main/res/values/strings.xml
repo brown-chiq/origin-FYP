@@ -10,7 +10,7 @@
     <!-- Home Page -->
     <string name="crashcourse">Crash Course</string>
     <string name="challenges">Challenges</string>
-    <string name="welcome_to_logicapp">Welcome to LogiCApp</string>
+    <string name="welcome_to_logicapp">Welcome to LogiKApp</string>
 
     <!-- Kit Manual -->
     <string name="manualIntro">Instructions on how to use the LogiKit</string>
@@ -21,15 +21,14 @@
 
     <!-- Crash Course -->
     <string name="intro">UNIT 1: Introduction</string>
-    <string name="logic_signals">A logic value, 0 or 1, is often called a binary digit, or a bit. If an application requires more than two discrete values, more bits may be used, with a set o n bits representing 2 to the power of n  different values</string>
+    <string name="logic_signals">Machines only understand a sequence of 1s and 0s. \n\n \n0 and 1 are called binary digits, or a bit. </string>
     <string name="combinational_circuit">Combinational Circuit</string>
     <string name="combination_circuit_explanation">A logic circuit whose outputs depend only on its current inputs is called a combinational circuit</string>
     <string name="truth_table">Truth Table</string>
     <string name="truth_table_explanation">A combinational circuits\'s operation is fully described by a truth table that lists all combinations of input values and the output value(s) produced by each one.</string>
-
     <string name="logic_operations_title">UNIT 2: Logic Operations</string>
-    <string name="logic_operations_explanation1">Operations performed on the binary variables few called Logic Operations.</string>
-    <string name="logic_operations_explanation2">Just three BASIC logic operations/functions, AND, OR and NOT, can be used to build any combinational digital logic circuit.</string>
+    <string name="logic_operations_explanation1">Operations performed on the binary variables using logic gates are called Logic Operations.</string>
+    <string name="logic_operations_explanation2">With BASIC logic gates any digital logic circuit can be built. Let\'s discover them in the following topic.</string>
     <string name="not">NOT</string>
     <string name="logic_operations_NOT_explanation">This operation is represented by an over bar (-) or a prime (\').\nIt produces the opposite value: \n- If X is 0 then X\' is 1.\n- If X is 1 then X\' is 0.\nAlso called complement or inversion operation</string>
     <string name="and">AND</string>
@@ -44,12 +43,11 @@
     <string name="logic_operations_XOR_explanation">- The XOR is called the exclusive OR because it is similar to the OR gate, but it only outputs an HIGH if there is exclusively one input that is high. \n- It is great for projects in which the activation requires input alternation.\n- It will output a high signal if an odd number of the inputs are high.\n</string>
     <string name="xnor">XNOR</string>
     <string name="logic_operations_XNOR_explanation">- The XNOR expands to eXclusive-Not-OR.\n -This gate is referred to as the \"equivalence\" gate because its outputs HIGH only if both inputs are the same (either both high or both low), and outputs LOW when the inputs are different(one high and one low).</string>
-    <string name="summary">Summary\n</string>
-
+    <string name="summary">Summary</string>
     <string name="boolean_algebra">UNIT 3: Boolean Algebra</string>
-    <string name="bool_alge_intro">After understanding the different types of basic logic gates, let\'s look into how to combine them to represent the boolean function that performs logical tasks.</string>
+    <string name="bool_alge_intro">After understanding the different types of basic logic gates, we can now combine them to represent the boolean function that performs desired logical tasks according to specific inputs.</string>
     <string name="bool_law">Boolean Algebraic Laws </string>
-    <string name="bool_law_explanation">In order to build an efficient logic circuit we need to perform simplification. \n\nThis is where Boolean Algebraic Laws come into play. \n\n\nLet\'s look into the different types of laws! </string>
+    <string name="bool_law_explanation">Let\'s learn how to simplify it to design efficient and cost friendly logic circuits. \n\nBoolean Algebraic Laws is needed to perform simplification. \n\nLet\'s dig into the different types of laws! </string>
     <string name="annulment_law">Annulment Law</string>
     <string name="annulment_law_explanation">A term AND\'ed with a “0” equals 0 or OR\'ed with a “1” will equal 1. \n\n- A . 0 = 0  \n A variable AND\'ed with 0 is always equal to 0. \n\n - A + 1 = 1 \n A variable OR\'ed with 1 is always equal to 1.\n </string>
     <string name="identity_law">Identity Law</string>
@@ -61,17 +59,17 @@
     <string name="commutative_law">Commutative Law</string>
     <string name="commutative_law_exp">The order of application of two separate terms is not important. \n \n- A . B = B . A  \n The order in which two variables are AND\'ed makes no difference. \n \n- A + B = B + A   \n The order in which two variables are OR\'ed makes no difference.\n</string>
     <string name="double_negation_law">Double Negation Law </string>
-    <string name="double_negation_law_exp">A term that is inverted twice is equal to the original term. \n \n- A = A  \n A double complement of a variable is always equal to the variable.\n</string>
-    <string name="de_morgans_theorem">de Morgan\'s Theorem</string>
-    <string name="de_morgans_theorem_exp">There are two “de Morgan\'s” rules or theorems,\n \n(1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:  A+B = A . B\n \n(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:  A.B = A + B</string>
+    <string name="double_negation_law_exp">A term that is inverted twice is equal to the original term. \n \n- A\'\' = A  \n A double complement of a variable is always equal to the variable.\n</string>
+    <string name="de_morgans_theorem">De Morgan\'s Theorem</string>
+    <string name="de_morgans_theorem_exp">There are two “de Morgan\'s” rules or theorems,\n \n1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:  \n(A+B)\' = A\' . B\'\n \n(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:  \n(A.B)\' = A\' + B\'</string>
     <string name="boolean_postulates">Boolean Postulates</string>
-    <string name="boolean_postulates_exp">These are a set of Mathematical Laws which can be used in the simplification of Boolean Expressions. \n \n- 0 . 0 = 0   \n A 0 AND\'ed with itself is always equal to 0. \n \n- 1 . 1 = 1   \n A 1 AND\'ed with itself is always equal to 1. \n \n- 1 . 0 = 0   \n A 1 AND\'ed with a 0 is equal to 0. \n \n- 0 + 0 = 0   \n A 0 OR\'ed with itself is always equal to 0. \n \n- 1 + 1 = 1   \n A 1 OR\'ed with itself is always equal to 1. \n \n- 1 + 0 = 1   \n A 1 OR\'ed with a 0 is equal to 1. \n \n- 1\' = 0   \n The Inverse (Complement) of a 1 is always equal to 0. \n \n- 0\' = 1   \n The Inverse (Complement) of a 0 is always equal to 1.</string>
+    <string name="boolean_postulates_exp">These are a set of Mathematical Laws which can be used in the simplification of Boolean Expressions.</string>
     <string name="distributive_law">Distributive Law </string>
-    <string name="distributive_law_exp">This law permits the multiplying or factoring out of an expression. \n \n- OR Distributive Law : A(B + C) = A.B + A.C  \n \n- AND Distributive Law: A + (B.C) = (A + B).(A + C) </string>
+    <string name="distributive_law_exp">This law permits the multiplying or factoring out of an expression. \n \n- OR Distributive Law :\n  A . ( B + C ) = A . B + A . C  \n \n- AND Distributive Law:\n  A + (B . C) = (A + B).(A + C) </string>
     <string name="absorptive_law">Absorptive Law </string>
-    <string name="absorptive_law_exp">This law enables a reduction in a complicated expression to a simpler one by absorbing like terms. \n \n- OR Absorption Law : A + (A.B) = (A.1) + (A.B) = A(1 + B) = A \n \n- AND Absorption Law: A(A + B) = (A + 0).(A + B) = A + (0.B) = A </string>
+    <string name="absorptive_law_exp">This law enables a reduction in a complicated expression to a simpler one by absorbing like terms. \n \n- OR Absorption Law :\n  A + (A . B) = (A . 1) + (A . B) = A . (1 + B) = A \n \n- AND Absorption Law:\n  A . (A + B) = (A + 0).(A + B) = A + (0 . B) = A </string>
     <string name="associative_law">Associative Law </string>
-    <string name="associative_law_exp">This law allows the removal of brackets from an expression and regrouping of the variables. \n \n- OR Associate Law : A + (B + C) = (A + B) + C = A + B + C \n \n- AND Associate Law : A(B.C) = (A.B)C = A . B . C  </string>
+    <string name="associative_law_exp">This law allows the removal of brackets from an expression and regrouping of the variables. \n \n- OR Associate Law :\n  A + (B + C) = (A + B) + C = A + B + C \n \n- AND Associate Law : \n  A . (B . C) = (A . B) . C = A . B . C  </string>
 
     <string name="kmap">UNIT 4: Karnaugh Map</string>
 

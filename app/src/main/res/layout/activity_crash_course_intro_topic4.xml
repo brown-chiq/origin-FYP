@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -79,6 +79,16 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/truth_table_circuit_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_margin="10dp"
+            android:text="A representation used in logic and digital electronics to illustrate the relationship between all input possibilities and output values of a digital circuit. "
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
         <ImageView
             android:id="@+id/truth_table_image"
             android:layout_width="wrap_content"
@@ -88,16 +98,6 @@
             android:gravity="center"
             android:padding="10sp"
             android:src="@drawable/truthtable" />
-
-        <TextView
-            android:id="@+id/truth_table_circuit_explanation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:layout_margin="10dp"
-            android:text="@string/truth_table_explanation"
-            android:textAlignment="center"
-            android:textSize="25sp" />
 
     </LinearLayout>
 

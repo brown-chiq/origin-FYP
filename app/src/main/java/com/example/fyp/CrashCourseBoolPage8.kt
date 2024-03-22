@@ -8,8 +8,9 @@ import android.view.animation.Transformation
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.activity.ComponentActivity
 
-class CrashCourseBoolPage8 : AppCompatActivity() {
+class CrashCourseBoolPage8 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crash_course_bool_page8)
@@ -51,7 +52,7 @@ class CrashCourseBoolPage8 : AppCompatActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 80F, 90F)
+        val anim = ProgressBarAnimation(progressBar, 55F, 63F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
 

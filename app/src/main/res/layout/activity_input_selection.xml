@@ -30,6 +30,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintTop_toBottomOf="@id/back_button"/>
 
     <TextView
@@ -40,7 +41,7 @@
         android:text="Waiting for Connection Status... "
         android:textColor="@color/black"
         android:textSize="15sp"
-
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/viewId"/>
 

@@ -16,9 +16,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.io.IOException
+import java.io.InputStream
 import java.io.OutputStream
 import java.util.UUID
 
@@ -49,17 +49,13 @@ class InputSelection : ComponentActivity() {
         var inputSixLow = findViewById<Button>(R.id.input_six_low)
         var btConnectionStatus = findViewById<TextView>(R.id.connection_status)
 
-        // Request Bluetooth permissions
-        requestBluetoothPermissions()
+        requestBluetoothPermissions() // Request Bluetooth permissions
 
-        // Get Bluetooth adapter
-        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter() // Get Bluetooth adapter
 
-        // Find paired devices
-        findPairedDevices()
+        findPairedDevices() // Find paired devices
 
-        // Connect to selected Bluetooth device
-        connectToDevice(btConnectionStatus)
+        connectToDevice(btConnectionStatus) // Connect to selected Bluetooth device
 
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
@@ -170,7 +166,7 @@ class InputSelection : ComponentActivity() {
                             "Turn on Bluetooth, connect with HC-05 and restart the app",
                             Toast.LENGTH_SHORT
                         ).show()
-                        connectionStatus.setText("Not connected to LogiKit")
+                        connectionStatus.setText("Not connected to LogiKit, Please Try Again")
                         connectionStatus.setTextColor(Color.parseColor("#FF0000"))
                     }
                     e.printStackTrace()

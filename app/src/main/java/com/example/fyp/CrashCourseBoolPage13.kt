@@ -13,8 +13,8 @@ import androidx.activity.ComponentActivity
 class CrashCourseBoolPage13 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crash_course_bool_page13)
 
+        setContentView(R.layout.activity_crash_course_bool_page13)
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
             val intent = Intent(this, CrashCourseMain::class.java)
@@ -23,10 +23,12 @@ class CrashCourseBoolPage13 : ComponentActivity() {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
-        var doneButton = findViewById<Button>(R.id.done)
-        doneButton.setOnClickListener {
-            val intent = Intent(this, CrashCourseMain::class.java)
+        var nextButton = findViewById<Button>(R.id.next_page)
+        nextButton.setOnClickListener {
+            val intent = Intent(this, CrashCourseBoolPage14::class.java)
             startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         var prevButton = findViewById<Button>(R.id.prev_page)
@@ -35,14 +37,6 @@ class CrashCourseBoolPage13 : ComponentActivity() {
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-        }
-
-        var levelOne = findViewById<Button>(R.id.level_two_button)
-        levelOne.setOnClickListener {
-            val intent = Intent(this, ChallengesLevelTwo::class.java)
-            startActivity(intent)
-            @Suppress("DEPRECATION")
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         class ProgressBarAnimation(
@@ -58,8 +52,10 @@ class CrashCourseBoolPage13 : ComponentActivity() {
             }
         }
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        val anim = ProgressBarAnimation(progressBar, 90F, 100F)
+        val anim = ProgressBarAnimation(progressBar, 90F, 95F)
         anim.duration = 1000
         progressBar.startAnimation(anim)
+
+
     }
 }

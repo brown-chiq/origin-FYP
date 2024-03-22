@@ -21,26 +21,23 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
         android:padding="16dp"
-        android:progress="12"
-        app:layout_constraintBottom_toTopOf="@id/done"
+        app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lv_notes"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/done"
+        android:id="@+id/next_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:gravity="center"
         android:padding="16dp"
-        android:text="@string/done"
+        android:text="@string/next_page"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,33 +62,119 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="16dp"
+        android:paddingHorizontal="50dp"
         app:layout_constraintTop_toBottomOf="@id/back_button"
-        app:layout_constraintBottom_toTopOf="@id/done">
+        app:layout_constraintBottom_toTopOf="@id/next_page">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Let's test your understanding!"
-            android:textSize="20sp"
+            android:text="@string/summary"
+            android:textStyle="bold"
+            android:textColor="@color/hot_pink"
             android:gravity="center"
-            android:padding="20sp"/>
-
-        <Button
-            android:id="@+id/level_two_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/level_two"
-            android:clickable="true"
+            android:textSize="45sp"
             android:padding="20sp"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/level_two"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:layout_marginVertical="40dp" />
+
+        <TextView
+            android:id="@+id/bool_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bool_law"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/annulment_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/annulment_law"
+            android:gravity="end"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/identity_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/identity_law"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/idempotent_law"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="@string/idempotent_law"
+            android:gravity="end"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/complement_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/complement_law"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/commutative_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/commutative_law"
+            android:gravity="end"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/double_negation_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/double_negation_law"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/de_morgans_theorem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/de_morgans_theorem"
+            android:gravity="end"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/boolean_postulates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/boolean_postulates"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/distributive_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/distributive_law"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/absorptive_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/absorptive_law"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/associative_law"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/associative_law"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:textSize="30sp" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

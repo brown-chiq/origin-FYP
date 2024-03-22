@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -70,22 +70,53 @@
             android:id="@+id/de_morgans_theorem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/de_morgans_theorem"
-            android:textStyle="bold"
+            android:textColor="@color/deep_pink"
+            android:layout_margin="20dp"
             android:gravity="center"
-            android:textSize="40sp"
             android:padding="20sp"
-            android:layout_margin="20dp" />
+            android:text="@string/de_morgans_theorem"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/de_morgans_theorem_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/de_morgans_theorem_exp"
+            android:text="There are two “de Morgan\'s” rules or theorems:"
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
             android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(1) Two separate terms NOR\'ed together is the same as the two terms inverted (Complement) and AND\'ed for example:"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(A + B)\' = A\' . B\'"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(2) Two separate terms NAND\'ed together is the same as the two terms inverted (Complement) and OR\'ed for example:"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n(A . B)\' = A\' + B\'"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="15dp" />
 
     </LinearLayout>
 

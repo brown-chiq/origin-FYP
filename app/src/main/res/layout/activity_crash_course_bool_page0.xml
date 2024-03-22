@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
+       android:progressTint="@color/navy_700"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +78,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="@color/deep_pink"
-        android:text="of Logic Circuits"
+        android:text="of Combinational Logic Circuits"
         android:textSize="30sp"
         android:textStyle="bold"
         android:padding="10sp"
@@ -112,7 +113,7 @@
             android:contentDescription="TODO"
             android:gravity="center"
             android:padding="10sp"
-            android:src="@drawable/q2" />
+            android:src="@drawable/block_diagram" />
 
     </LinearLayout>
 

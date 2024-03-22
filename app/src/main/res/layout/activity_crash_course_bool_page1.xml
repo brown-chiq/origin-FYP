@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
+        android:progressTint="@color/navy_700"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +96,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="15dp"
             android:contentDescription="TODO"
             android:gravity="center"
             android:padding="10sp"
@@ -105,9 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:gravity="start"
             android:padding="20sp"
-            android:layout_marginBottom="10dp"
+
             android:layout_marginStart="10dp"
             android:text="@string/bool_law_explanation"
             android:textSize="22sp" />

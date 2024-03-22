@@ -21,7 +21,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:progress="12"
+        android:progressTint="@color/navy_700"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:gravity="center"
@@ -72,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/identity_law"
+            android:textColor="@color/deep_pink"
             android:textStyle="bold"
             android:gravity="center"
             android:textSize="40sp"
@@ -79,13 +80,47 @@
             android:layout_margin="20dp" />
 
         <TextView
-            android:id="@+id/identity_law_exp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/identity_law_exp"
+            android:text="A term OR\'ed with a “0” or AND\'ed with a “1” will always equal that term."
             android:gravity="start"
             android:textSize="30sp"
-            android:padding="20sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A + 0 = A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A variable OR\'ed with 0 is always equal to the variable."
+            android:gravity="start"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A . 1 = A"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A variable AND\'ed with 1 is always equal to the variable."
+            android:gravity="start"
+            android:textSize="30sp"
             android:layout_margin="20dp" />
 
     </LinearLayout>
