@@ -178,7 +178,9 @@ class InputSelection : ComponentActivity() {
     private fun sendCommand(LEDIndex: Int, value: Int) {
         val command = "$LEDIndex,$value,9\n"
         try {
-            outputStream?.write(command.toByteArray())
+            var op =outputStream?.write(command.toByteArray())
+
+            Log.d("Command", op.toString())
             Log.d("Command", command)
         } catch (e: IOException) {
             e.printStackTrace()

@@ -73,7 +73,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Let's test your understanding!"
+            android:text="Let's test your understanding!\n"
             android:textSize="30sp"
             android:gravity="center"
             android:paddingBottom="20sp"/>

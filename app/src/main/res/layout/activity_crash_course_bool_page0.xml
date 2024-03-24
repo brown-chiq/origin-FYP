@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Algebraical Representation"
+        android:text="\nAlgebraical Representation"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/deep_pink"

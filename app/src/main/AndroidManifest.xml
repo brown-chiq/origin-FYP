@@ -26,10 +26,28 @@
         android:theme="@style/Theme.FYP"
         tools:targetApi="31">
         <activity
-            android:name=".CrashCourseIntroTopic2"
+            android:name=".CrashCourseKMapPage6"
             android:exported="false" />
         <activity
-            android:name=".LogiKitSetUP"
+            android:name=".CrashCourseKMapPage5"
+            android:exported="false" />
+        <activity
+            android:name=".CrashCourseKMapPage4"
+            android:exported="false" />
+        <activity
+            android:name=".CrashCourseKMapPage3"
+            android:exported="false" />
+        <activity
+            android:name=".CrashCourseKMapPage2"
+            android:exported="false" />
+        <activity
+            android:name=".CrashCourseKMapPage1"
+            android:exported="false" />
+        <activity
+            android:name=".OutputTesting"
+            android:exported="false" />
+        <activity
+            android:name=".CrashCourseIntroTopic2"
             android:exported="false" />
         <activity
             android:name=".LogiKitTruthTable"

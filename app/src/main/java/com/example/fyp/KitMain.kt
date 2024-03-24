@@ -1,5 +1,6 @@
 package com.example.fyp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -7,9 +8,18 @@ import android.widget.ImageView
 import androidx.activity.ComponentActivity
 
 class KitMain : ComponentActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kit_main)
+
+        var logikitOutput = findViewById<Button>(R.id.logikit_output)
+        logikitOutput.setOnClickListener {
+            val intent = Intent(this, OutputTesting::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
 
         var manualButton = findViewById<Button>(R.id.logikit_input_set)
         manualButton.setOnClickListener {
