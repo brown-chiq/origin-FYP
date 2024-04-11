@@ -26,6 +26,15 @@
         android:theme="@style/Theme.FYP"
         tools:targetApi="31">
         <activity
+            android:name=".UserGuide"
+            android:exported="false" />
+        <activity
+            android:name=".KitTry6"
+            android:exported="false" />
+        <activity
+            android:name=".KitTry5"
+            android:exported="false" />
+        <activity
             android:name=".CrashCourseKMapPage6"
             android:exported="false" />
         <activity

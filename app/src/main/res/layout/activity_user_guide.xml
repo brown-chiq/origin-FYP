@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserGuide">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="26sp"
+        android:layout_height="26sp"
+        android:layout_margin="20sp"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="24dp"
+        android:text="Step 1: Make sure all the manual override buttons are switched off (“O” pressed down)\n
+\nStep 2: Place the LogiK Lego’s orientation according to the color code painted on the sides of it, when placing it into the LogiKit.\n
+\nStep 3: Use the wires provided to link up the input and LogiK Legos as intended.\n
+\nStep 4: Connect the LogiKit to the power source by plugging in the 3-point plug to a plug socket to power up the LogiKit.\n
+\nStep 5: Click on “LogiKit Inputs” or “Generate TruthTable” features in the LogiKApp, to interact with the LogiKit wirelessly. Another way one can experiment around is by using the buttons to set intended inputs accordingly.
+\nStep 6: Observe the flow of the logic combination on the LED.\n
+\nStep 7: Have fun experimenting with different combinations.\n
+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,14 @@ class KitMain : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kit_main)
 
+        var userGuide = findViewById<Button>(R.id.manual)
+        userGuide.setOnClickListener {
+            val intent = Intent(this, UserGuide::class.java)
+            startActivity(intent)
+            @Suppress("DEPRECATION")
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
         var logikitOutput = findViewById<Button>(R.id.logikit_output)
         logikitOutput.setOnClickListener {
             val intent = Intent(this, OutputTesting::class.java)
@@ -21,8 +29,8 @@ class KitMain : ComponentActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        var manualButton = findViewById<Button>(R.id.logikit_input_set)
-        manualButton.setOnClickListener {
+        var logikitInput = findViewById<Button>(R.id.logikit_input_set)
+        logikitInput.setOnClickListener {
             val intent = Intent(this, InputSelection::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")

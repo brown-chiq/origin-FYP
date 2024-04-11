@@ -1,6 +1,7 @@
 package com.example.fyp
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.Transformation
@@ -9,10 +10,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.ComponentActivity
 
-class KitTry4 : ComponentActivity() {
+class KitTry5 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kit_try_page4)
+        setContentView(R.layout.activity_kit_try_page5)
 
         var backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
@@ -24,7 +25,7 @@ class KitTry4 : ComponentActivity() {
 
         var nextButton = findViewById<Button>(R.id.next_page)
         nextButton.setOnClickListener {
-            val intent = Intent(this, KitTry5::class.java)
+            val intent = Intent(this, KitTry6::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -33,22 +34,6 @@ class KitTry4 : ComponentActivity() {
         var prevButton = findViewById<Button>(R.id.prev_page)
         prevButton.setOnClickListener {
             val intent = Intent(this, KitTry3::class.java)
-            startActivity(intent)
-            @Suppress("DEPRECATION")
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-        }
-
-        var boolalg = findViewById<Button>(R.id.boolalg)
-        boolalg.setOnClickListener {
-            val intent = Intent(this, CrashCourseBoolPage0::class.java)
-            startActivity(intent)
-            @Suppress("DEPRECATION")
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-        }
-
-        var kmap = findViewById<Button>(R.id.kmap)
-        kmap.setOnClickListener {
-            val intent = Intent(this, CrashCourseKMapPage1::class.java)
             startActivity(intent)
             @Suppress("DEPRECATION")
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)

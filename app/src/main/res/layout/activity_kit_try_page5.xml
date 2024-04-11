@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KitTry4">
+    tools:context=".KitTry5">
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="26sp"
@@ -60,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/step_three"
+        android:text="Step 4"
         android:textColor="@color/deep_pink"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -75,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/try_four_subtt"
+        android:text="Check  the simplified boolean algebric equation into a combinational logic circuit"
         android:textSize="30sp"
         android:textStyle="bold"
         android:padding="10sp"
@@ -96,32 +97,36 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/try_four_ans1"
+            android:text="After simplication, you should have derived the folllowing equation: "
+            android:gravity="start"
+            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:padding="20sp"
+            android:layout_margin="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="f(X,Y,Z)  =  (Y\' Z)  +  (X Y\')"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/dark_red"
+            android:textSize="25sp"
+            android:padding="10sp"
+            android:layout_margin="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translating it into a combinational logic circuit would look like this:"
             android:gravity="start"
             android:textSize="22sp"
             android:padding="20sp"
             android:layout_margin="20dp" />
 
-        <Button
-            android:id="@+id/boolalg"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Boolean Algebra"
-            android:textAllCaps="false"
-            android:textSize="22sp"
-            android:textColor="@color/dark_red"
-
-            android:backgroundTint="@color/white"/>
-
-        <Button
-            android:id="@+id/kmap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Karnaugh Map"
-            android:textAllCaps="false"
-            android:textColor="@color/dark_red"
-            android:textSize="22sp"
-            android:backgroundTint="@color/white"/>
+            android:layout_height="300dp"
+            android:src="@drawable/photo_2024_04_09_21_38_03" />
 
     </LinearLayout>
 

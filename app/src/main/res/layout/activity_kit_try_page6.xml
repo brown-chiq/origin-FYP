@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KitTry4">
+    tools:context=".KitTry6">
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="26sp"
@@ -36,7 +37,7 @@
         android:clickable="true"
         android:gravity="center"
         android:padding="16dp"
-        android:text="@string/next_page"
+        android:text="@string/done"
         android:layout_margin="20sp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/step_three"
+        android:text="Step 5"
         android:textColor="@color/deep_pink"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -75,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/try_four_subtt"
+        android:text="Duplicate the combinational logic circuit onto LogiKit"
         android:textSize="30sp"
         android:textStyle="bold"
         android:padding="10sp"
@@ -93,36 +94,34 @@
         app:layout_constraintTop_toBottomOf="@id/subtt"
         app:layout_constraintBottom_toTopOf="@id/progressBar">
 
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/photo_2024_04_09_21_38_03" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/try_four_ans1"
+            android:text="To form the circuitry, use: \n- 1 NOT gate\n- 2 AND gate \n- 1 OR gates \n\nCheck: Input same logic combinations as stated on the truth table, and ensure the outcome is the same output as listed."
             android:gravity="start"
             android:textSize="22sp"
             android:padding="20sp"
             android:layout_margin="20dp" />
 
-        <Button
-            android:id="@+id/boolalg"
-            android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Boolean Algebra"
-            android:textAllCaps="false"
-            android:textSize="22sp"
+            android:text="CONGRATULATIONS!! \nYou have completed the task!! \n\n Now go and create something useful!!"
+            android:gravity="center"
+            android:textStyle="bold"
             android:textColor="@color/dark_red"
-
-            android:backgroundTint="@color/white"/>
-
-        <Button
-            android:id="@+id/kmap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Karnaugh Map"
-            android:textAllCaps="false"
-            android:textColor="@color/dark_red"
-            android:textSize="22sp"
-            android:backgroundTint="@color/white"/>
-
+            android:textSize="25sp"
+            android:padding="10sp"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
