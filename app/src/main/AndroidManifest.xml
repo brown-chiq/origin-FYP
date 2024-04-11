@@ -53,9 +53,6 @@
             android:name=".CrashCourseKMapPage1"
             android:exported="false" />
         <activity
-            android:name=".OutputTesting"
-            android:exported="false" />
-        <activity
             android:name=".CrashCourseIntroTopic2"
             android:exported="false" />
         <activity

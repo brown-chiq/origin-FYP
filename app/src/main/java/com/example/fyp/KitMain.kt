@@ -21,13 +21,6 @@ class KitMain : ComponentActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        var logikitOutput = findViewById<Button>(R.id.logikit_output)
-        logikitOutput.setOnClickListener {
-            val intent = Intent(this, OutputTesting::class.java)
-            startActivity(intent)
-            @Suppress("DEPRECATION")
-            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        }
 
         var logikitInput = findViewById<Button>(R.id.logikit_input_set)
         logikitInput.setOnClickListener {

@@ -22,6 +22,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -110,7 +111,9 @@ class LogiKitTruthTable : ComponentActivity() {
 
             Log.d("TruthTable", "Rows: $rows, Columns: $columns")
 
-            generateTable(rows, columns, numInput, switchesChecked, tableLayout)
+            lifecycleScope.launch {
+                generateTable(rows, columns, numInput, switchesChecked, tableLayout)
+            }
 
 
 
@@ -129,7 +132,7 @@ class LogiKitTruthTable : ComponentActivity() {
 
     }
 
-    private fun generateTable(
+    private suspend fun generateTable(
         rows: Int,
         columns: Int,
         numInput: Int,
@@ -173,11 +176,15 @@ class LogiKitTruthTable : ComponentActivity() {
                         var inputNum = switch[6].digitToInt()
                         sendCommand(inputNum, input.toInt()) //send command to arduino
                         stopSending()
+                        delay(2000)
                         receive()
+                        delay(2000)
                         stopReceiving()
+                        delay(2000)
 
                         textView.text = input
                     } else { // listen output from arduino
+
 //
                     }
                 }
