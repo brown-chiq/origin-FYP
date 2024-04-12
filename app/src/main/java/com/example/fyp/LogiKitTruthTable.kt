@@ -111,9 +111,7 @@ class LogiKitTruthTable : ComponentActivity() {
 
             Log.d("TruthTable", "Rows: $rows, Columns: $columns")
 
-            lifecycleScope.launch {
-                generateTable(rows, columns, numInput, switchesChecked, tableLayout)
-            }
+            generateTable(rows, columns, numInput, switchesChecked, tableLayout)
 
 
 
@@ -132,7 +130,7 @@ class LogiKitTruthTable : ComponentActivity() {
 
     }
 
-    private suspend fun generateTable(
+    private fun generateTable(
         rows: Int,
         columns: Int,
         numInput: Int,
@@ -176,15 +174,11 @@ class LogiKitTruthTable : ComponentActivity() {
                         var inputNum = switch[6].digitToInt()
                         sendCommand(inputNum, input.toInt()) //send command to arduino
                         stopSending()
-                        delay(2000)
                         receive()
-                        delay(2000)
                         stopReceiving()
-                        delay(2000)
 
                         textView.text = input
                     } else { // listen output from arduino
-
 //
                     }
                 }
